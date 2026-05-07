@@ -1,18 +1,11 @@
 # robots.txt for 广东艾里森光电技术有限公司
 # https://alisnart.cn
-# Last updated: 2026-04-01
+# Last updated: 2026-05-08
 
-# Allow all search engines
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://alisnart.cn/sitemap.xml
-
-# Crawl delay (optional - 1 second between requests)
 Crawl-delay: 1
 
-# Major search engines
 User-agent: Googlebot
 Allow: /
 
@@ -28,17 +21,19 @@ Allow: /
 User-agent: 360Spider
 Allow: /
 
-User-agent: YandexBot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-# AI crawlers and search assistants
 User-agent: GPTBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: PerplexityBot
@@ -47,30 +42,19 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: Amazonbot
-Allow: /
-
 User-agent: Applebot
 Allow: /
 
-User-agent: FacebookBot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-# Additional AI crawlers
 User-agent: CCBot
 Allow: /
 
-User-agent: CommonCrawl
+User-agent: Amazonbot
 Allow: /
 
-User-agent: WaybackMachine
-Allow: /
+Sitemap: https://alisnart.cn/sitemap.xml
 
-# No blocking - all content is public and indexable
-# All pages are allowed for crawling and indexing
+# AI-readable entry points
+# https://alisnart.cn/llms.txt
+# https://alisnart.cn/ai-search-ready.txt
+# https://alisnart.cn/geo-feed.json
+# https://alisnart.cn/geo-promotion.html
