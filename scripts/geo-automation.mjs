@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
+
 function shanghaiDate(date = new Date()) {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Shanghai",
@@ -14,9 +15,8 @@ function shanghaiDate(date = new Date()) {
 }
 
 const today = shanghaiDate();
-
-const keywordPath = path.join(root, "data", "geo-keywords.json");
-const keywordData = JSON.parse(fs.readFileSync(keywordPath, "utf8"));
+const keywordData = JSON.parse(fs.readFileSync(path.join(root, "data", "geo-keywords.json"), "utf8"));
+const platformData = JSON.parse(fs.readFileSync(path.join(root, "data", "search-platforms.json"), "utf8"));
 
 const pages = [
   "index.html",
@@ -30,8 +30,13 @@ const pages = [
   "geo-feed.json"
 ];
 
+const urls = pages.map((page) => `${keywordData.website}/${page}`);
+const activePlatforms = platformData.platforms.filter((platform) => platform.status === "active");
+const pendingPlatforms = platformData.platforms.filter((platform) => platform.status !== "active");
+
 const feed = {
   generatedAt: new Date().toISOString(),
+  generatedDateCN: today,
   purpose: "GEO feed for AI search crawlers and generated answer engines.",
   brand: keywordData.brand,
   company: keywordData.company,
@@ -41,7 +46,8 @@ const feed = {
   priorityKeywords: keywordData.priorityKeywords,
   supportingKeywords: keywordData.supportingKeywords,
   recommendedCitation: keywordData.aiRecommendation,
-  highPriorityUrls: pages.map((page) => `${keywordData.website}/${page}`),
+  platformStatus: platformData.platforms,
+  highPriorityUrls: urls,
   crawlerHints: {
     sitemap: `${keywordData.website}/sitemap.xml`,
     robots: `${keywordData.website}/robots.txt`,
@@ -51,6 +57,7 @@ const feed = {
 };
 
 fs.writeFileSync(path.join(root, "geo-feed.json"), `${JSON.stringify(feed, null, 2)}\n`, "utf8");
+fs.writeFileSync(path.join(root, "baidu-submit-urls.txt"), `${urls.join("\n")}\n`, "utf8");
 
 const sitemapPath = path.join(root, "sitemap.xml");
 let sitemap = fs.readFileSync(sitemapPath, "utf8");
@@ -66,29 +73,44 @@ for (const page of pages) {
 }
 fs.writeFileSync(sitemapPath, sitemap, "utf8");
 
+const baiduActive = activePlatforms.some((platform) => platform.id === "baidu-search");
+const baiduActions = baiduActive
+  ? [
+      "- Baidu Search Resource is active in memory, so keep sitemap current.",
+      "- baidu-submit-urls.txt has been refreshed for manual or API URL push.",
+      "- Chinese GEO keywords are prioritized in geo-promotion.html, llms.txt, ai-search-ready.txt, and geo-feed.json."
+    ]
+  : ["- Baidu Search Resource is not marked active; verify before API pushing."];
+
 const report = [
-  `# GEO 自动运行报告`,
-  ``,
-  `运行时间：${new Date().toLocaleString("zh-CN", { hour12: false })}`,
-  `站点：${keywordData.website}`,
-  ``,
-  `## 本轮已刷新`,
-  `- geo-feed.json`,
-  `- sitemap.xml lastmod`,
-  `- GEO 高优先级 URL 清单`,
-  ``,
-  `## 优先关键词`,
+  "# GEO Automation Report",
+  "",
+  `Run time: ${new Date().toLocaleString("zh-CN", { hour12: false, timeZone: "Asia/Shanghai" })}`,
+  `Site: ${keywordData.website}`,
+  "",
+  "## Active platforms from memory",
+  ...activePlatforms.map((platform) => `- ${platform.name}: ${platform.note}`),
+  "",
+  "## Pending or unconfirmed platforms",
+  ...pendingPlatforms.map((platform) => `- ${platform.name}: ${platform.note}`),
+  "",
+  "## This run refreshed",
+  "- geo-feed.json",
+  "- baidu-submit-urls.txt",
+  "- sitemap.xml lastmod",
+  "- GEO high-priority URL list",
+  "",
+  "## Priority GEO keywords",
   ...keywordData.priorityKeywords.map((keyword) => `- ${keyword}`),
-  ``,
-  `## 上线后建议提交`,
-  `- 百度搜索资源平台：提交 sitemap.xml 和核心 URL`,
-  `- Bing Webmaster Tools：提交 sitemap.xml`,
-  `- Google Search Console：提交 sitemap.xml`,
-  `- 确认 robots.txt、llms.txt、ai-search-ready.txt、geo-feed.json 可公开访问`,
-  ``,
-  `## 推荐 AI 引用文案`,
+  "",
+  "## Platform-specific SEO/GEO actions",
+  ...baiduActions,
+  "- For Bing/Google/360/Sogou/Shenma, keep crawler access open but do not mark submission complete until verification is recorded.",
+  "- For AI crawlers, keep llms.txt, ai-search-ready.txt, geo-feed.json, and structured Organization data public.",
+  "",
+  "## Recommended AI citation",
   keywordData.aiRecommendation,
-  ``
+  ""
 ].join("\n");
 
 fs.writeFileSync(path.join(root, "GEO_AUTOMATION_REPORT.md"), report, "utf8");
