@@ -1,0 +1,20 @@
+# 艾里森官网手动上传命令（在你的SSH客户端执行）
+
+# 1. 上传中文站HTML
+scp "D:\艾里森官网\cases.html" root@8.138.214.74:/usr/share/nginx/html/
+scp "D:\艾里森官网\cases\lantern-tree-plaza.html" root@8.138.214.74:/usr/share/nginx/html/cases/
+scp "D:\艾里森官网\cases\moonlit-wonderland.html" root@8.138.214.74:/usr/share/nginx/html/cases/
+scp "D:\艾里森官网\cases\celestial-ring-plaza.html" root@8.138.214.74:/usr/share/nginx/html/cases/
+scp "D:\艾里森官网\cases\han-moon-peacock-swing.html" root@8.138.214.74:/usr/share/nginx/html/cases/
+
+# 2. 上传英文站HTML（批量）
+scp "D:\艾里森官网\en_site\projects\*.html" root@8.138.214.74:/usr/share/nginx/html/en_site/projects/
+
+# 3. 上传图片（新版本，破缓存）
+scp "D:\艾里森官网\cases-images\lantern-tree-plaza.webp" root@8.138.214.74:/usr/share/nginx/html/cases-images/
+scp "D:\艾里森官网\cases\images\lantern-tree-plaza.webp" root@8.138.214.74:/usr/share/nginx/html/cases/images/
+scp "D:\艾里森官网\en_site\assets\images\projects\lantern-tree-plaza.webp" root@8.138.214.74:/usr/share/nginx/html/en_site/assets/images/projects/
+
+# 完成后验证
+curl -I https://alisnart.cn/cases.html | grep "HTTP"
+curl -I https://alisnart.cn/cases-images/lantern-tree-plaza.webp | grep "HTTP"

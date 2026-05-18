@@ -1,0 +1,72 @@
+[
+  {
+    "page": "biomorphic-led-canopy",
+    "score": 4,
+    "param_density": 2,
+    "faq_count": 0,
+    "pronoun_count": 0,
+    "issues": [
+      "参数密度不足（仅2处），需增加具体数值",
+      "缺少FAQPage Schema",
+      "缺少Product Schema（价格/评分）"
+    ]
+  },
+  {
+    "page": "tropical-resort-archway",
+    "score": 4,
+    "param_density": 3,
+    "faq_count": 0,
+    "pronoun_count": 0,
+    "issues": [
+      "参数密度不足（仅3处），需增加具体数值",
+      "缺少FAQPage Schema",
+      "缺少Product Schema（价格/评分）"
+    ]
+  },
+  {
+    "page": "lantern-tree-plaza",
+    "score": 6,
+    "param_density": 27,
+    "faq_count": 4,
+    "pronoun_count": 0,
+    "issues": [
+      "开头描述冗长，未在50字内给出核心价值",
+      "缺少Product Schema（价格/评分）",
+      "FAQ不足5个（当前4个）"
+    ]
+  },
+  {
+    "page": "moonlit-wonderland",
+    "score": 6,
+    "param_density": 23,
+    "faq_count": 4,
+    "pronoun_count": 0,
+    "issues": [
+      "开头描述冗长，未在50字内给出核心价值",
+      "缺少Product Schema（价格/评分）",
+      "FAQ不足5个（当前4个）"
+    ]
+  },
+  {
+    "page": "celestial-ring-plaza",
+    "score": 7,
+    "param_density": 32,
+    "faq_count": 5,
+    "pronoun_count": 0,
+    "issues": [
+      "开头描述冗长，未在50字内给出核心价值",
+      "缺少Product Schema（价格/评分）"
+    ]
+  },
+  {
+    "page": "han-moon-peacock-swing",
+    "score": 7,
+    "param_density": 52,
+    "faq_count": 6,
+    "pronoun_count": 1,
+    "issues": [
+      "开头描述冗长，未在50字内给出核心价值",
+      "缺少Product Schema（价格/评分）"
+    ]
+  }
+]
