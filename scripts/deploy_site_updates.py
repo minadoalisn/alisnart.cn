@@ -118,7 +118,10 @@ def push_baidu(urls):
     print("\n=== 百度URL推送 ===")
     
     full_urls = [f"https://alisnart.cn/{url}" for url in urls]
-    api_url = f"http://data.zz.baidu.com/urls?site=alisnart.cn&token={BAIDU_TOKEN}"
+    # api_url = f"http://data.zz.baidu.com/urls?site=alisnart.cn&token={BAIDU_TOKEN}"
+    # print("百度推送功能已暂时禁用")
+    # return True
+
     
     try:
         r = requests.post(
