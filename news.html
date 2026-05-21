@@ -15,18 +15,38 @@
     </section>
     <section class="section">
       <div class="wrap">
-        <div class="grid">
-          <article class="card"><span class="tag">运营</span><h3>为什么打卡点拍不出片？</h3><p>常见问题不是灯不够亮，而是背景层次、人物补光、队列空间和最佳机位没有被同时设计。</p></article>
-          <article class="card"><span class="tag">动线</span><h3>游客逛完就走，怎么留住？</h3><p>夜游动线需要连续的情绪节点：入口惊喜、途中互动、核心高潮和出口消费转化。</p></article>
-          <article class="card"><span class="tag">技术</span><h3>灯光控制系统如何选？</h3><p>小型节点看稳定，大型项目看分区控制、远程维护、备份策略和后期节目更新效率。</p></article>
-          <article class="card"><span class="tag">预算</span><h3>预算有限先做哪里？</h3><p>优先做入口识别、主照片点和消费区导流，先把“来过”的证明感做出来。</p></article>
-          <article class="card"><span class="tag">文化</span><h3>地方故事如何变成视觉？</h3><p>不要直接堆符号，而要提炼色彩、纹样、传说和空间关系，让游客自然理解主题。</p></article>
-          <article class="card"><span class="tag">运维</span><h3>户外装置最容易忽略什么？</h3><p>检修通道、防水等级、散热、线缆标识和备件策略，决定项目半年后的真实观感。</p></article>
+        <div class="grid" id="news-grid">
+          <article class="card"><span class="tag">加载中</span><h3>正在读取最新发布内容</h3><p>如果长时间未显示，请刷新页面。</p></article>
         </div>
       </div>
     </section>
   </main>
   <footer class="site-footer"><div class="wrap footer-grid"><div><h3>广东艾里森光电技术有限公司</h3><p>持续分享文旅光影项目的设计、工程和运营经验。</p></div><div><h3>联系</h3><p>电话：<a href="tel:18026422225">18026422225</a><br>邮箱：<a href="mailto:alisnlight@163.com">alisnlight@163.com</a></p></div><div><h3>备案</h3><p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026035496号</a></p></div></div></footer>
   <script src="assets/js/site.js"></script>
+  <script>
+    async function loadLatestNews() {
+      const grid = document.getElementById('news-grid');
+      try {
+        const response = await fetch('data/news.json?v=' + Date.now(), { cache: 'no-store' });
+        const items = await response.json();
+        grid.innerHTML = items
+          .slice()
+          .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')) || Number(b.id || 0) - Number(a.id || 0))
+          .slice(0, 24)
+          .map((item) => `
+            <a class="card" href="news-detail.html?id=${encodeURIComponent(item.id)}">
+              <span class="tag">${item.category || '内容更新'}</span>
+              <h3>${item.title || '未命名内容'}</h3>
+              <p>${item.description || '查看最新项目、产品发布和行业洞察。'}</p>
+              <p style="margin-top:12px;color:#666;font-size:13px;">${item.date || ''} · 阅读 ${item.views || 0}</p>
+            </a>
+          `).join('');
+      } catch (error) {
+        console.error(error);
+        grid.innerHTML = '<article class="card"><span class="tag">加载失败</span><h3>最新内容暂时无法读取</h3><p>请稍后刷新页面。</p></article>';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadLatestNews);
+  </script>
 </body>
 </html>

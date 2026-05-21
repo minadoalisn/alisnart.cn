@@ -168,7 +168,7 @@
         // 动态加载文案数据
         async function loadCopywriting() {
             try {
-                const response = await fetch('data/news.json');
+                const response = await fetch('data/news.json?v=' + Date.now(), { cache: 'no-store' });
                 allCopywriting = await response.json();
                 initFilters();
                 updateStats();

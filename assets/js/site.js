@@ -2,23 +2,29 @@ const toggle = document.querySelector(".nav-toggle");
 const links = document.querySelector(".nav-links");
 
 if (toggle && links) {
-  function openMenu() {
-    const isOpen = links.classList.toggle("open");
+  function setMenu(isOpen) {
+    links.classList.toggle("open", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
     toggle.textContent = isOpen ? "✕" : "☰";
     document.body.style.overflow = isOpen ? "hidden" : "";
   }
-  toggle.addEventListener("click", openMenu);
-  toggle.addEventListener("touchend", (e) => { e.preventDefault(); openMenu(); });
 
-  // 点击菜单链接后自动关闭
+  toggle.addEventListener("click", () => {
+    setMenu(!links.classList.contains("open"));
+  });
+
   links.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
-      links.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.textContent = "☰";
-      document.body.style.overflow = "";
+      setMenu(false);
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenu(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.matchMedia("(min-width: 901px)").matches) setMenu(false);
   });
 }
 

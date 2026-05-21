@@ -120,7 +120,7 @@
                 }
 
                 // 加载新闻数据
-                const response = await fetch('data/news.json');
+                const response = await fetch('data/news.json?v=' + Date.now(), { cache: 'no-store' });
                 const newsList = await response.json();
                 
                 // 查找对应的新闻
