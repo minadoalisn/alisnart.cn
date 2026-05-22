@@ -10,16 +10,46 @@
       ]
     },
     {
-      "source": "/data/(.*).json",
+      "source": "/(llms.txt|ai-search-ready.txt|robots.txt)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
         }
       ]
     },
     {
-      "source": "/(sitemap.xml|robots.txt|llms.txt|ai-search-ready.txt|geo-feed.json|schema-markup.json)",
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(geo-feed.json|schema-markup.json)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/data/(.*).json",
       "headers": [
         {
           "key": "Cache-Control",

@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/">
   <link rel="alternate" hreflang="en" href="https://alisnart.cn/en/">
   <title>广东艾里森光电技术有限公司 | 文旅灯光秀与光影艺术装置</title>
-<link rel="stylesheet" href="assets/css/site.css?v=9">
+<link rel="stylesheet" href="assets/css/site.css?v=10">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -79,7 +79,7 @@
           <h2 class="section-title">从“好看”走向“可运营”的夜游场景</h2>
           <p class="section-copy">我们不只做设备堆叠，而是把游客动线、拍照传播、停留时间、运维成本和地方文化一起纳入设计。</p>
         </div>
-        <div class="grid">
+        <div class="grid" id="home-projects">
           <article class="card">
             <span class="tag">文旅夜游</span>
             <h3>景区灯光秀与主游线</h3>
@@ -157,7 +157,38 @@
     </div>
     <div class="wrap copyright">© 2026 广东艾里森光电技术有限公司 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026035496号</a></div>
   </footer>
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/site.js?v=10"></script>
+  <script>
+    async function refreshHomeProjects() {
+      const grid = document.getElementById('home-projects');
+      if (!grid) return;
+      const fallback = grid.innerHTML;
+      try {
+        const response = await fetch('data/news.json?v=' + Date.now(), { cache: 'no-store' });
+        const items = await response.json();
+        const latest = items
+          .slice()
+          .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')) || Number(b.id || 0) - Number(a.id || 0))
+          .filter((item) => /产品|新品|案例|项目|发布/.test([item.category, item.title, item.keywords].join(' ')))
+          .slice(0, 3);
+        if (!latest.length) return;
+        grid.innerHTML = latest.map((item) => `
+          <a class="card media-card" href="news-detail.html?id=${encodeURIComponent(item.id)}">
+            <div class="article-image" style="height:220px;display:grid;place-items:center;font-size:56px;background:${item.imageGradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}">${item.image || '✨'}</div>
+            <div class="media-body">
+              <span class="tag">${item.category || '最新发布'}</span>
+              <h3>${item.title || '最新项目发布'}</h3>
+              <p>${item.description || '查看艾里森光电最新产品、项目和行业内容。'}</p>
+            </div>
+          </a>
+        `).join('');
+      } catch (error) {
+        console.error(error);
+        grid.innerHTML = fallback;
+      }
+    }
+    document.addEventListener('DOMContentLoaded', refreshHomeProjects);
+  </script>
 <script>
 var _hmt = _hmt || [];
 (function() {
