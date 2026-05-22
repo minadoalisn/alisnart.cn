@@ -276,13 +276,15 @@ h1 {
   /* 全屏菜单面板 */
   .nav-links {
     display: none;
-    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
     flex-direction: column;
-    background: rgba(5,5,5,0.98);
+    background: #050505;
     backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-    padding: 80px 24px 24px; /* 上方留出导航栏空间 */
-    gap: 0; z-index: 150; /* 在按钮之下 */
+    padding: 18px 24px 28px;
+    gap: 0; z-index: 1000;
     overflow-y: auto;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.75);
   }
   .nav-links.open,
   .nav.nav-open .nav-links,
@@ -297,6 +299,10 @@ h1 {
     display: block; padding: 18px 0; font-size: 20px; font-weight: 600; color: #fff;
     min-height: 56px; /* 大触控区 */
     display: flex; align-items: center;
+  }
+  body.nav-open .site-header,
+  .nav.nav-open {
+    z-index: 1200;
   }
   .nav-links .lang-switch {
     justify-content: center;
