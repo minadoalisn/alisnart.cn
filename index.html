@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/">
   <link rel="alternate" hreflang="en" href="https://alisnart.cn/en/">
   <title>广东艾里森光电技术有限公司 | 文旅灯光秀与光影艺术装置</title>
-<link rel="stylesheet" href="assets/css/site.css?v=11">
+<link rel="stylesheet" href="assets/css/site.css?v=12">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,7 +37,11 @@
         <span class="brand-mark">AL</span>
         <span>艾里森光电<small>Light Art & Night Tourism</small></span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="打开导航" aria-controls="primary-navigation" aria-expanded="false">☰</button>
+      <input class="nav-menu-state" type="checkbox" id="nav-menu-state" aria-hidden="true">
+      <label class="nav-toggle" for="nav-menu-state" aria-label="打开导航" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="nav-open-icon">☰</span>
+        <span class="nav-close-icon">✕</span>
+      </label>
       <!-- 净化导航：移除 SEO/GEO 等低价值链接 -->
       <ul class="nav-links" id="primary-navigation">
         <li><a class="active" href="index.html">首页</a></li>
@@ -157,7 +161,7 @@
     </div>
     <div class="wrap copyright">© 2026 广东艾里森光电技术有限公司 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026035496号</a></div>
   </footer>
-  <script src="assets/js/site.js?v=11"></script>
+  <script src="assets/js/site.js?v=12"></script>
   <script>
     function getProjectImage(item) {
       const text = [item.category, item.title, item.description, item.keywords].join(' ');

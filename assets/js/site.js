@@ -2,33 +2,32 @@ function initSiteNav() {
   const toggle = document.querySelector(".nav-toggle");
   const links = document.querySelector(".nav-links");
   const nav = document.querySelector(".nav");
+  const state = document.querySelector(".nav-menu-state");
 
   if (!toggle || !links || toggle.dataset.bound === "true") return;
   toggle.dataset.bound = "true";
-  toggle.type = "button";
 
   function setMenu(isOpen) {
     links.classList.toggle("open", isOpen);
     nav?.classList.toggle("nav-open", isOpen);
     document.body.classList.toggle("nav-open", isOpen);
+    if (state) state.checked = isOpen;
     toggle.setAttribute("aria-expanded", String(isOpen));
-    toggle.textContent = isOpen ? "✕" : "☰";
     document.body.style.overflow = isOpen ? "hidden" : "";
   }
 
-  let lastToggleAt = 0;
-
-  function toggleMenu(event) {
-    event.preventDefault();
-    event.stopPropagation();
-    const now = Date.now();
-    if (now - lastToggleAt < 350) return;
-    lastToggleAt = now;
-    setMenu(!links.classList.contains("open"));
+  function isMenuOpen() {
+    return Boolean(state?.checked || links.classList.contains("open"));
   }
 
-  toggle.addEventListener("click", toggleMenu, true);
-  toggle.addEventListener("pointerup", toggleMenu, true);
+  if (state) {
+    state.addEventListener("change", () => setMenu(state.checked));
+  } else {
+    toggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      setMenu(!isMenuOpen());
+    });
+  }
 
   links.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => setMenu(false));

@@ -75,6 +75,13 @@ img { display: block; max-width: 100%; height: auto; }
 .lang-switch::after { display: none; }
 
 /* 汉堡按钮 - 手机端可见 */
+.nav-menu-state {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
 .nav-toggle {
   display: none; flex-direction: column; justify-content: center; align-items: center;
   width: 48px; height: 48px; background: none; border: 1px solid var(--border);
@@ -83,6 +90,7 @@ img { display: block; max-width: 100%; height: auto; }
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
+.nav-close-icon { display: none; }
 
 /* ====== Hero 区域 ====== */
 .hero {
@@ -279,9 +287,11 @@ h1 {
   .nav-links.open,
   .nav.nav-open .nav-links,
   body.nav-open .nav-links,
-  .nav:focus-within .nav-links {
+  .nav-menu-state:checked ~ .nav-links {
     display: flex !important;
   }
+  .nav-menu-state:checked + .nav-toggle .nav-open-icon { display: none; }
+  .nav-menu-state:checked + .nav-toggle .nav-close-icon { display: inline; }
   .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.06); }
   .nav-links a {
     display: block; padding: 18px 0; font-size: 20px; font-weight: 600; color: #fff;
