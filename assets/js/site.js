@@ -1,22 +1,41 @@
-const toggle = document.querySelector(".nav-toggle");
-const links = document.querySelector(".nav-links");
+function initSiteNav() {
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
+  const nav = document.querySelector(".nav");
 
-if (toggle && links) {
+  if (!toggle || !links || toggle.dataset.bound === "true") return;
+  toggle.dataset.bound = "true";
+  toggle.type = "button";
+
   function setMenu(isOpen) {
     links.classList.toggle("open", isOpen);
+    nav?.classList.toggle("nav-open", isOpen);
+    document.body.classList.toggle("nav-open", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
     toggle.textContent = isOpen ? "✕" : "☰";
     document.body.style.overflow = isOpen ? "hidden" : "";
   }
 
-  toggle.addEventListener("click", () => {
+  let lastToggleAt = 0;
+
+  function toggleMenu(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const now = Date.now();
+    if (now - lastToggleAt < 350) return;
+    lastToggleAt = now;
     setMenu(!links.classList.contains("open"));
-  });
+  }
+
+  toggle.addEventListener("click", toggleMenu, true);
+  toggle.addEventListener("pointerup", toggleMenu, true);
 
   links.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      setMenu(false);
-    });
+    a.addEventListener("click", () => setMenu(false));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!nav?.contains(event.target)) setMenu(false);
   });
 
   document.addEventListener("keydown", (event) => {
@@ -27,6 +46,9 @@ if (toggle && links) {
     if (window.matchMedia("(min-width: 901px)").matches) setMenu(false);
   });
 }
+
+initSiteNav();
+document.addEventListener("DOMContentLoaded", initSiteNav);
 
 const estimator = document.querySelector("[data-estimator]");
 

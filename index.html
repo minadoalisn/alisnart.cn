@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/">
   <link rel="alternate" hreflang="en" href="https://alisnart.cn/en/">
   <title>广东艾里森光电技术有限公司 | 文旅灯光秀与光影艺术装置</title>
-<link rel="stylesheet" href="assets/css/site.css?v=10">
+<link rel="stylesheet" href="assets/css/site.css?v=11">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,9 +37,9 @@
         <span class="brand-mark">AL</span>
         <span>艾里森光电<small>Light Art & Night Tourism</small></span>
       </a>
-      <button class="nav-toggle" aria-label="打开导航" aria-expanded="false">☰</button>
+      <button class="nav-toggle" type="button" aria-label="打开导航" aria-controls="primary-navigation" aria-expanded="false">☰</button>
       <!-- 净化导航：移除 SEO/GEO 等低价值链接 -->
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation">
         <li><a class="active" href="index.html">首页</a></li>
         <li><a href="services.html">业务</a></li>
         <li><a href="cases.html">案例</a></li>
@@ -157,8 +157,24 @@
     </div>
     <div class="wrap copyright">© 2026 广东艾里森光电技术有限公司 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026035496号</a></div>
   </footer>
-  <script src="assets/js/site.js?v=10"></script>
+  <script src="assets/js/site.js?v=11"></script>
   <script>
+    function getProjectImage(item) {
+      const text = [item.category, item.title, item.description, item.keywords].join(' ');
+      const imageRules = [
+        [/无人机|天鹅|水上|湖泊|巡演/, 'cases-images/swan-drone-show.webp'],
+        [/未来|5年|系统|科技|橱窗|数字|平台/, 'cases-images/optoelectronic-glass-display.webp'],
+        [/商业|招商|广场|品牌|街区/, 'cases-images/biomorphic-led-canopy.webp'],
+        [/景区|夜游|月|仙境|游客|停留/, 'cases-images/moonlit-wonderland.webp'],
+        [/龙|节庆|春节|国潮/, 'cases-images/case-gold-dragon.webp'],
+        [/爱心|浪漫|情侣|打卡/, 'cases-images/heart-pavilion.webp'],
+        [/古镇|老街|城市|更新/, 'cases-images/golden-leaf-tunnel.webp'],
+        [/度假|酒店|入口|热带/, 'cases-images/tropical-resort-archway.webp']
+      ];
+      const matched = imageRules.find(([rule]) => rule.test(text));
+      return matched ? matched[1] : 'cases-images/case-light-arch.webp';
+    }
+
     async function refreshHomeProjects() {
       const grid = document.getElementById('home-projects');
       if (!grid) return;
@@ -174,7 +190,7 @@
         if (!latest.length) return;
         grid.innerHTML = latest.map((item) => `
           <a class="card media-card" href="news-detail.html?id=${encodeURIComponent(item.id)}">
-            <div class="article-image" style="height:220px;display:grid;place-items:center;font-size:56px;background:${item.imageGradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}">${item.image || '✨'}</div>
+            <img src="${getProjectImage(item)}" alt="${item.title || '艾里森光电最新项目发布'}" loading="lazy">
             <div class="media-body">
               <span class="tag">${item.category || '最新发布'}</span>
               <h3>${item.title || '最新项目发布'}</h3>

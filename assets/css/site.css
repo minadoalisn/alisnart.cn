@@ -276,7 +276,12 @@ h1 {
     gap: 0; z-index: 150; /* 在按钮之下 */
     overflow-y: auto;
   }
-  .nav-links.open { display: flex !important; }
+  .nav-links.open,
+  .nav.nav-open .nav-links,
+  body.nav-open .nav-links,
+  .nav:focus-within .nav-links {
+    display: flex !important;
+  }
   .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.06); }
   .nav-links a {
     display: block; padding: 18px 0; font-size: 20px; font-weight: 600; color: #fff;
