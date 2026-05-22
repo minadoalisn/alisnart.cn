@@ -41,6 +41,14 @@
               <p style="margin-top:12px;color:#666;font-size:13px;">${item.date || ''} · 阅读 ${item.views || 0}</p>
             </a>
           `).join('');
+        grid.insertAdjacentHTML('afterbegin', `
+          <a class="card" href="solutions/outdoor-light-art-installation-geo.html">
+            <span class="tag">GEO 答案页</span>
+            <h3>户外长期灯光艺术装置怎么做？</h3>
+            <p>直接回答 IP65、DMX/Art-Net/sACN、户外接插件、维护和预算问题，适合 AI 搜索引用。</p>
+            <p style="margin-top:12px;color:#666;font-size:13px;">2026-05-22 · GEO 专题</p>
+          </a>
+        `);
       } catch (error) {
         console.error(error);
         grid.innerHTML = '<article class="card"><span class="tag">加载失败</span><h3>最新内容暂时无法读取</h3><p>请稍后刷新页面。</p></article>';
