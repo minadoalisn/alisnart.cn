@@ -54,29 +54,94 @@ const estimator = document.querySelector("[data-estimator]");
 
 if (estimator) {
   const output = estimator.querySelector("[data-result]");
-  const inputs = estimator.querySelectorAll("input, select, textarea");
+  const inputs = estimator.querySelectorAll("select, textarea");
 
-  const plans = {
-    scenic: "景区夜游：建议先做一条 300-800 米的主游线，用入口仪式感、核心打卡点和终点演艺形成完整动线。",
-    commercial: "商业美陈：建议围绕节庆节点做轻量可换装结构，让装置兼顾拍照传播和后续复用。",
-    city: "城市更新：建议以建筑立面、街区节点和公共艺术装置组合，先打造一段可被市民记住的夜间界面。",
-    stage: "舞台演艺：建议把灯光、机械、屏幕和表演节奏一起设计，优先保证现场安全与维护效率。"
+  const scenes = {
+    scenic: {
+      title: "景区主游线",
+      modules: ["入口光影门", "主拍照装置", "导视灯线", "终点演艺节点"],
+      advice: "先用入口仪式感和 2-3 个强记忆点拉出主游线，再决定是否增加投影、雾森或演艺内容。"
+    },
+    lake: {
+      title: "湖面演艺",
+      modules: ["湖心浮台", "岸线补光", "RGBW 演艺灯具", "一键开演控制"],
+      advice: "先确认水深、锚泊、岸电和观演方向，再配置灯具密度和节目时长。"
+    },
+    street: {
+      title: "商业街区",
+      modules: ["节庆门头", "可换主题灯饰", "互动橱窗", "街区导流节点"],
+      advice: "重点做可复用、可换主题、可拍照传播的装置，让每个节日都能低成本更新。"
+    },
+    commercial: {
+      title: "商业街区",
+      modules: ["节庆门头", "可换主题灯饰", "互动橱窗", "街区导流节点"],
+      advice: "重点做可复用、可换主题、可拍照传播的装置，让每个节日都能低成本更新。"
+    },
+    town: {
+      title: "古镇夜游",
+      modules: ["牌坊入口", "水巷灯影", "非遗主题装置", "小型光影演出"],
+      advice: "控制光污染，把建筑、街巷、水面和地方文化串成慢游路线。"
+    },
+    city: {
+      title: "城市更新",
+      modules: ["建筑立面光影", "街区节点装置", "公共艺术灯光", "慢行导视系统"],
+      advice: "先打造一段可被市民记住的夜间界面，再逐步扩展到街区和城市更新片区。"
+    },
+    stage: {
+      title: "舞台演艺",
+      modules: ["演艺灯具", "舞台机械接口", "节目控制系统", "观众区补光"],
+      advice: "把灯光、机械、屏幕和表演节奏一起设计，优先保证现场安全与维护效率。"
+    },
+    hotel: {
+      title: "酒店入口",
+      modules: ["迎宾光廊", "品牌发光装置", "车道引导灯", "节庆换装系统"],
+      advice: "优先解决第一眼识别、夜间到达感和社媒拍照点，不建议一开始做复杂演艺。"
+    }
+  };
+
+  const budgets = {
+    light: { label: "20-50 万", level: "轻量打卡版", pace: "15-25 天", density: "1 个主装置 + 少量氛围灯" },
+    standard: { label: "50-150 万", level: "标准运营版", pace: "25-45 天", density: "2-4 个核心节点 + 控制系统" },
+    system: { label: "150-500 万", level: "动线系统版", pace: "45-75 天", density: "完整动线 + 互动/演艺/运维预案" },
+    flagship: { label: "500 万以上", level: "旗舰夜游版", pace: "75 天以上", density: "多区联动 + 内容系统 + 长期运营机制" }
+  };
+
+  const goals = {
+    photo: "打卡传播",
+    flow: "引流停留",
+    show: "演艺主秀",
+    renewal: "城市更新"
   };
 
   function render() {
-    const type = estimator.querySelector("[name='type']").value;
-    const area = Number(estimator.querySelector("[name='area']").value || 0);
-    const budget = Number(estimator.querySelector("[name='budget']").value || 0);
-    const goal = estimator.querySelector("[name='goal']").value.trim() || "提升夜间停留与传播";
-    const level = area > 5000 || budget > 200 ? "完整策划+工程深化" : "概念方案+核心装置样机";
+    const scene = scenes[estimator.querySelector("[name='type']")?.value] || scenes.scenic;
+    const budget = budgets[estimator.querySelector("[name='budget']")?.value] || budgets.standard;
+    const scale = estimator.querySelector("[name='scale']")?.value || "node";
+    const goalValue = estimator.querySelector("[name='goal']")?.value?.trim();
+    const goal = goals[goalValue] || goalValue || goals.photo;
+    const note = estimator.querySelector("[name='note']")?.value?.trim() || "";
+    const scaleLabel = scale === "district" ? "片区级" : scale === "route" ? "动线级" : "单点级";
 
     output.innerHTML = `
-      <span class="tag">方案建议</span>
-      <h3>${level}</h3>
-      <p>${plans[type]}</p>
-      <p><strong>项目目标：</strong>${goal}</p>
-      <p><strong>建议节奏：</strong>7 天梳理主题与预算，15 天完成视觉方向，30 天输出施工深化与设备清单。</p>
-      <p><strong>下一步：</strong>准备现场平面、动线照片、开放时间、供电条件，我们可以快速判断哪些点最值得先亮起来。</p>
+      <div class="result-head">
+        <span class="tag">预估方案</span>
+        <h2>${scene.title} · ${budget.level}</h2>
+        <p>${scaleLabel}项目，核心目标是${goal}。${scene.advice}</p>
+      </div>
+      <div class="result-metrics">
+        <div><strong>${budget.label}</strong><span>建议预算</span></div>
+        <div><strong>${budget.pace}</strong><span>预估周期</span></div>
+        <div><strong>${budget.density}</strong><span>配置密度</span></div>
+      </div>
+      <div class="result-block">
+        <h3>推荐配置</h3>
+        <ul>${scene.modules.map((item) => `<li>${item}</li>`).join("")}</ul>
+      </div>
+      <div class="result-block">
+        <h3>下一步资料</h3>
+        <p>准备现场照片、平面尺寸、供电位置、开放时间、目标客流和预算上限，我们可以据此输出可报价的深化方案。</p>
+        ${note ? `<p class="note"><strong>现场备注：</strong>${note}</p>` : ""}
+      </div>
     `;
   }
 

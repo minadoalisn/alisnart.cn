@@ -3,32 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="艾里森光电灯光方案估算工具，根据项目类型、面积、预算和目标生成初步夜游灯光方案建议。">
-  <title>灯光方案估算工具 | 广东艾里森光电技术有限公司</title>
+  <meta name="description" content="Alisn light art project estimator for scenic night tours, lake shows, commercial streets, old towns and hotel entrances.">
   <link rel="canonical" href="https://alisnart.cn/en/light-designer.html">
   <link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/light-designer.html">
   <link rel="alternate" hreflang="en" href="https://alisnart.cn/en/light-designer.html">
-  <link rel="stylesheet" href="../assets/css/site.css?v=15">
+  <title>Light Art Project Estimator | Alisn</title>
+  <link rel="stylesheet" href="../assets/css/site.css?v=18">
 </head>
 <body>
-  <header class="site-header"><nav class="nav"><a class="brand" href="index.html"><span class="brand-mark">AL</span><span>艾里森光电<small>Light Art & Night Tourism</small></span></a><button class="nav-toggle" aria-label="打开导航" aria-expanded="false">☰</button><ul class="nav-links"><li><a href="index.html">首页</a></li><li><a href="services.html">业务</a></li><li><a href="cases.html">案例</a></li><li><a href="about.html">关于</a></li><li><a href="news.html">洞察</a></li><li><a href="geo.html">广东服务</a></li><li><a class="active" href="light-designer.html">设计工具</a></li><li><a href="../light-designer.html" class="lang-switch" style="background:#d4af37;color:#000;padding:4px 8px;border-radius:4px;font-size:0.8em;">中文</a></li></ul></nav></header>
+  <header class="site-header"><nav class="nav"><a class="brand" href="index.html"><span class="brand-mark">AL</span><span>Alisn<small>Light Art & Night Tourism</small></span></a><button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="cases.html">Cases</a></li><li><a href="about.html">About</a></li><li><a href="news.html">Insights</a></li><li><a href="geo.html">Nationwide</a></li><li><a class="active" href="light-designer.html">Estimator</a></li><li><a href="../light-designer.html" class="lang-switch">中文</a></li></ul></nav></header>
   <main class="page">
-    <section class="hero compact-hero" style="--hero-image:url('https://images.unsplash.com/photo-1507901747481-84a4f64fda6d?auto=format&fit=crop&w=1800&q=82')">
-      <div class="wrap hero-content"><span class="eyebrow">设计工具</span><h1>快速判断项目该怎么先亮起来</h1><p class="lead">输入项目类型、面积、预算和目标，生成一份初步方向建议，便于前期沟通。</p></div>
+    <section class="hero compact-hero" style="--hero-image:url('../cases-images/moonlit-wonderland.webp')">
+      <div class="wrap hero-content"><span class="eyebrow">Estimator</span><h1>Define where to light first, how to operate it, and whether the budget fits</h1><p class="lead">Generate an early-stage direction for scenic areas, lake shows, commercial streets, old towns and hotel entrances.</p></div>
     </section>
     <section class="section">
-      <div class="wrap tool-shell" data-estimator>
-        <form class="panel">
-          <div class="form-row"><label for="type">项目类型</label><select id="type" name="type"><option value="scenic">景区夜游</option><option value="commercial">商业美陈</option><option value="city">城市更新</option><option value="stage">舞台演艺</option></select></div>
-          <div class="form-row"><label for="area">项目面积/动线长度估算</label><input id="area" name="area" type="number" value="3000" min="0"></div>
-          <div class="form-row"><label for="budget">预算区间（万元）</label><input id="budget" name="budget" type="number" value="120" min="0"></div>
-          <div class="form-row"><label for="goal">核心目标</label><textarea id="goal" name="goal">提升夜间客流、增加拍照传播、延长游客停留</textarea></div>
+      <div class="wrap estimator-studio" data-estimator>
+        <form class="estimator-panel" aria-label="Light art project estimator">
+          <div class="estimator-kicker">Project inputs</div>
+          <div class="estimator-grid">
+            <label class="field-card"><span>Scenario</span><select name="type"><option value="scenic">Scenic route</option><option value="lake">Lake show</option><option value="street">Commercial street</option><option value="town">Old town</option><option value="hotel">Hotel entrance</option></select></label>
+            <label class="field-card"><span>Scale</span><select name="scale"><option value="node">Single node</option><option value="route">Visitor route</option><option value="district">District upgrade</option></select></label>
+            <label class="field-card"><span>Budget</span><select name="budget"><option value="light">RMB 200k-500k</option><option value="standard" selected>RMB 500k-1.5m</option><option value="system">RMB 1.5m-5m</option><option value="flagship">RMB 5m+</option></select></label>
+            <label class="field-card"><span>Main goal</span><select name="goal"><option value="photo">Photo sharing</option><option value="flow">Traffic and dwell time</option><option value="show">Main show</option><option value="renewal">Urban renewal</option></select></label>
+          </div>
+          <label class="field-card wide"><span>Site note</span><textarea name="note" rows="4" placeholder="Example: entrance plaza, water feature, holiday theme changes, visitor photo spot."></textarea></label>
         </form>
-        <section class="panel result" data-result aria-live="polite"></section>
+        <section class="estimator-output" data-result aria-live="polite"></section>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-grid"><div><h3>广东艾里森光电技术有限公司</h3><p>工具结果仅供前期判断，实际方案需结合现场条件深化。</p></div><div><h3>联系</h3><p>电话：<a href="tel:18026422225">18026422225</a><br>邮箱：<a href="mailto:alisnlight@163.com">alisnlight@163.com</a></p></div><div><h3>备案</h3><p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026035496号</a></p></div></div></footer>
-  <script src="../assets/js/site.js?v=15"></script>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><h3>Guangdong Alisn Photoelectric Technology Co., Ltd.</h3><p>The estimator is for early discussion; final proposals depend on site conditions.</p></div><div><h3>Contact</h3><p>Tel: <a href="tel:18026422225">18026422225</a><br>Email: <a href="mailto:alisnlight@163.com">alisnlight@163.com</a></p></div><div><h3>Language</h3><p><a href="../light-designer.html">中文页面</a></p></div></div></footer>
+  <script src="../assets/js/site.js?v=18"></script>
 </body>
 </html>
