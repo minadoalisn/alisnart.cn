@@ -65,14 +65,20 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .nav-links a:hover::after { width: 100%; }
 .lang-switch {
-  background: var(--accent-gold);
+  background: #fff;
   color: #000 !important;
   padding: 6px 10px !important;
   border-radius: 4px;
   font-size: 13px !important;
   font-weight: 800 !important;
+  border: 1px solid #fff;
 }
 .lang-switch::after { display: none; }
+.nav-links a.lang-switch:hover {
+  color: #000 !important;
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
 
 /* 汉堡按钮 - 手机端可见 */
 .nav-menu-state {
@@ -445,6 +451,15 @@ h1 {
     min-width: 44px;
     margin-top: 0;
     width: auto;
+  }
+
+  .nav-links a.lang-switch {
+    color: #000 !important;
+    background: #fff;
+    border-color: #fff;
+    min-width: 48px;
+    font-weight: 900;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 22px rgba(255,255,255,0.12);
   }
 
   .hero {
