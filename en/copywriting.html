@@ -37,7 +37,7 @@
         .hero h1 { font-size: 48px; color: #FFD700; margin-bottom: 20px; }
         .hero p { font-size: 18px; color: #ccc; }
         .container { max-width: 1600px; margin: 0 auto; padding: 60px 20px; }
-        
+
         /* 统计面板 */
         .stats-panel { background: rgba(255, 215, 0, 0.1); border: 1px solid #FFD700; border-radius: 10px; padding: 30px; margin-bottom: 40px; }
         .stats-title { color: #FFD700; font-size: 24px; margin-bottom: 20px; text-align: center; }
@@ -45,7 +45,7 @@
         .stat-item { background: #1a1a1a; border-radius: 10px; padding: 30px; text-align: center; border: 1px solid #333; }
         .stat-number { font-size: 48px; font-weight: bold; color: #FFD700; margin-bottom: 10px; }
         .stat-label { font-size: 16px; color: #ccc; }
-        
+
         /* 筛选面板 */
         .filter-panel { background: #1a1a1a; border-radius: 10px; padding: 25px; margin-bottom: 30px; border: 1px solid #333; }
         .filter-title { color: #FFD700; font-size: 18px; margin-bottom: 15px; }
@@ -53,7 +53,7 @@
         .filter-btn { background: #333; color: #ccc; border: 1px solid #444; padding: 8px 20px; border-radius: 20px; cursor: pointer; font-size: 14px; transition: all 0.3s; }
         .filter-btn:hover { background: rgba(255, 215, 0, 0.2); border-color: #FFD700; color: #FFD700; }
         .filter-btn.active { background: rgba(255, 215, 0, 0.3); border-color: #FFD700; color: #FFD700; }
-        
+
         /* 文案网格 */
         .copywriting-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .copywriting-card { background: #1a1a1a; border-radius: 10px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #333; cursor: pointer; text-decoration: none; display: block; }
@@ -64,7 +64,7 @@
         .copywriting-card h3 { color: #FFD700; margin-bottom: 10px; font-size: 18px; line-height: 1.4; }
         .copywriting-card p { color: #ccc; line-height: 1.6; margin-bottom: 15px; font-size: 14px; }
         .copywriting-meta { color: #666; font-size: 13px; display: flex; justify-content: space-between; }
-        
+
         .footer { background: #111; padding: 40px 20px; text-align: center; margin-top: 60px; }
         .footer-info p { margin: 10px 0; color: #ccc; }
         .footer-info a { color: #FFD700; text-decoration: none; }
@@ -74,7 +74,7 @@
         .contact-box p { color: #ccc; margin-bottom: 15px; }
         .contact-box a { color: #FFD700; font-size: 20px; font-weight: bold; text-decoration: none; }
         .loading { text-align: center; padding: 60px; font-size: 18px; color: #FFD700; }
-        
+
         @media(max-width:768px){
             .nav-links{gap:15px;font-size:14px}
             .hero h1{font-size:32px}
@@ -145,9 +145,13 @@
             <h2>📞 联系我们</h2>
             <p><strong>广东艾里森光电技术有限公司</strong> - 专注于文旅场景创新与光影艺术赋能的综合性科技服务商</p>
             <p>📍 地址：广东省江门市江海区东升路南山工业园西区一号厂房</p>
-            <p>📞 电话：<a href="tel:18026422225">180-2642-2225</a></p>
-            <p>📧 邮箱：<a href="mailto:alisnlight@163.com">alisnlight@163.com</a></p>
-            <p>🌐 官网：<a href="https://alisnart.cn">https://alisnart.cn</a></p>
+            <p>Official website: <a href="https://www.alisnart.com">www.alisnart.com</a><br>
+WhatsApp: <a href="https://wa.me/8615791503693">+86 15791503693</a><br>
+Facebook: <a href="https://www.facebook.com/alisnartsculpture/">alisnartsculpture</a><br>
+Instagram: <a href="https://www.instagram.com/vicky_alisnart/">vicky_alisnart</a><br>
+LinkedIn: <a href="https://www.linkedin.com/in/vicky-llh">vicky-llh</a><br>
+Xiaohongshu: 26812150420 / 94106741441<br>
+Images, videos and case materials on the official website and all social media platforms including Xiaohongshu can be directly referenced for proposal design.</p>
         </div>
     </div>
 
@@ -155,8 +159,9 @@
         <div class="footer-info">
             <p><strong>广东艾里森光电技术有限公司</strong></p>
             <p>地址：广东省江门市江海区东升路南山工业园西区一号厂房</p>
-            <p>电话：<a href="tel:18026422225">180-2642-2225</a></p>
-            <p>邮箱：<a href="mailto:alisnlight@163.com">alisnlight@163.com</a></p>
+            <p>WhatsApp: <a href="https://wa.me/8615791503693">+86 15791503693</a></p>
+            <p>Facebook: <a href="https://www.facebook.com/alisnartsculpture/">alisnartsculpture</a> | Instagram: <a href="https://www.instagram.com/vicky_alisnart/">vicky_alisnart</a> | LinkedIn: <a href="https://www.linkedin.com/in/vicky-llh">vicky-llh</a></p>
+            <p>Xiaohongshu: 26812150420 / 94106741441</p>
         </div>
         <div class="copyright">© 2026 广东艾里森光电技术有限公司 | <a href="https://beian.miit.gov.cn/" target="_blank" style="color: #666;">粤ICP备2026035496号</a></div>
     </div>
@@ -183,7 +188,7 @@
         function initFilters() {
             const categories = [...new Set(allCopywriting.map(item => item.category))];
             const filterButtons = document.getElementById('filter-buttons');
-            
+
             categories.forEach(category => {
                 const btn = document.createElement('button');
                 btn.className = 'filter-btn';
@@ -207,17 +212,17 @@
         // 筛选文案
         function filterCopywriting(filter) {
             currentFilter = filter;
-            
+
             // 更新按钮状态
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.filter === filter);
             });
 
             // 筛选并渲染
-            const filtered = filter === 'all' 
-                ? allCopywriting 
+            const filtered = filter === 'all'
+                ? allCopywriting
                 : allCopywriting.filter(item => item.category === filter);
-            
+
             renderCopywriting(filtered);
         }
 
