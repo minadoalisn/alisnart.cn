@@ -292,7 +292,9 @@ h1 {
   .nav-menu-state:checked ~ .nav-links {
     display: flex !important;
   }
+  .nav.nav-open .nav-open-icon,
   .nav-menu-state:checked + .nav-toggle .nav-open-icon { display: none; }
+  .nav.nav-open .nav-close-icon,
   .nav-menu-state:checked + .nav-toggle .nav-close-icon { display: inline; }
   .nav-links li { border-bottom: 1px solid rgba(255,255,255,0.06); }
   .nav-links a {

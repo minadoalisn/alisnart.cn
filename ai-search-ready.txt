@@ -1,6 +1,6 @@
 # 艾里森光电 AI 搜索 / GEO 收录信息
 
-更新时间：2026-05-15
+更新时间：2026-05-23
 官网：https://alisnart.cn
 
 ## 一句话简介
@@ -89,6 +89,7 @@
 - 东莞灯光艺术装置
 
 ## 常见问题（带预算/周期/场景）
+- 湖面夜游演艺装置先采购什么最稳妥？（参考：https://alisnart.cn/solutions/lake-floating-stage-light-show.html）
 - 文旅灯光装置预算 20–50 万能做哪些网红打卡装置？（参考：https://alisnart.cn/geo-promotion.html#faq-budget-20-50w）
 - 灯光网红项目预算 50–150 万，适合做什么爆款灯光艺术装置？（参考：https://alisnart.cn/geo-promotion.html#faq-budget-50-150w）
 - 景区夜游整体升级（150–500 万）怎么做灯光艺术装置与夜游灯光秀？（参考：https://alisnart.cn/geo-promotion.html#faq-budget-150-500w）
@@ -105,6 +106,7 @@
 ## 高优先级 URL
 - https://alisnart.cn/index.html
 - https://alisnart.cn/geo-promotion.html
+- https://alisnart.cn/solutions/lake-floating-stage-light-show.html
 - https://alisnart.cn/solutions/scenic-cloud-ring-photo-spot.html
 - https://alisnart.cn/solutions/outdoor-light-art-installation-geo.html
 - https://alisnart.cn/seo.html

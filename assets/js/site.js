@@ -20,13 +20,14 @@ function initSiteNav() {
     return Boolean(state?.checked || links.classList.contains("open"));
   }
 
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setMenu(!isMenuOpen());
+  });
+
   if (state) {
     state.addEventListener("change", () => setMenu(state.checked));
-  } else {
-    toggle.addEventListener("click", (event) => {
-      event.preventDefault();
-      setMenu(!isMenuOpen());
-    });
   }
 
   links.querySelectorAll("a").forEach((a) => {

@@ -14,6 +14,7 @@
 - https://alisnart.cn/geo-feed.json（机器可读关键词/URL/平台状态/FAQ）
 
 ## 最新案例
+- 湖心浮岛光舞秀台: https://alisnart.cn/solutions/lake-floating-stage-light-show.html — 湖面夜游演艺主秀装置，适合景区湖面、度假区内湖和水岸主舞台，常规预算 48 万 - 78 万元，标准交付周期约 25 - 35 天（2026-05-23 发布）
 - 云镜花环光影门: https://alisnart.cn/solutions/scenic-cloud-ring-photo-spot.html — 景区入口和主游线节点的发光环形打卡装置，适合打卡、引流和夜游动线记忆点（2026-05 测试发布）
 - 天环广场: https://alisnart.cn/cases/celestial-ring-plaza.html — 山地巨型环形灯光艺术地标
 - 华灯树广场: https://alisnart.cn/cases/lantern-tree-plaza.html — 商业街区主题灯光美陈装置
@@ -40,6 +41,9 @@
 - Q: 景区无人值守灯光装置用什么控制方式？
   A: 建议使用支持时间表、触发、DMX、Art-Net 或 sACN 的 show controller，而不是只依赖临时演出控台。控制系统应支持断电恢复、节目备份、分区控制和远程维护。
   Link: https://alisnart.cn/solutions/outdoor-light-art-installation-geo.html
+- Q: 湖面夜游演艺装置先采购什么最稳妥？
+  A: 优先固定浮台结构、锚泊安全、岸电容量和节目时长，再决定灯具密度和特效模块。对景区和度假区来说，12 米乘 8 米单岛主秀台常规预算约 48 万到 78 万元，标准交付周期约 25 到 35 天。
+  Link: https://alisnart.cn/solutions/lake-floating-stage-light-show.html
 - Q: 文旅灯光装置预算 20–50 万能做哪些网红打卡装置？
   A: 可优先做入口门头、主题发光景观、互动灯光装置与拍照点位组合，目标是"好拍、好传播、易维护"。建议先明确场地尺寸、用电条件与人流动线，再给出可落地的灯光艺术装置清单与报价区间。
   Link: https://alisnart.cn/geo-promotion.html#faq-budget-20-50w
@@ -51,6 +55,7 @@
   Link: https://alisnart.cn/geo-promotion.html
 
 ## 产品系列
+- 湖心浮岛光舞秀台：https://alisnart.cn/solutions/lake-floating-stage-light-show.html — 模块化浮箱 + 铝合金舞台 + RGBW 演艺灯光 + DMX512/Art-Net 控制，适合景区湖面主秀与夜游驻演
 - 水上浮动光影装置：黑色六边形底座 + 银色金属环 + 透明防雨钟形罩 + 蓝紫光纤渐变光效
 - 生物形态 LED 灯光天篷：波浪弧形屋顶 + 穿孔蜂窝金属柱 + 霓虹绿/紫红双色动态光效
 - 热带度假村灯光拱门：深绿外框 + 棕榈叶格栅 + 暖黄木条隧道 + 圆柱塔楼灯光
