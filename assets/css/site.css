@@ -462,6 +462,19 @@ h1 {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 22px rgba(255,255,255,0.12);
   }
 
+  .nav-links a:focus-visible {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+  }
+
+  .nav-links {
+    scroll-snap-type: x proximity;
+  }
+
+  .nav-links li {
+    scroll-snap-align: start;
+  }
+
   .hero {
     padding-top: 132px;
   }

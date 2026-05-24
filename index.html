@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/">
   <link rel="alternate" hreflang="en" href="https://alisnart.cn/en/">
   <title>广东艾里森光电技术有限公司 | 文旅灯光秀与光影艺术装置</title>
-<link rel="stylesheet" href="assets/css/site.css?v=20">
+<link rel="stylesheet" href="assets/css/site.css?v=21">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -160,7 +160,7 @@
     </div>
     <div class="wrap copyright">© 2026 广东艾里森光电技术有限公司 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026035496号</a></div>
   </footer>
-  <script src="assets/js/site.js?v=20"></script>
+  <script src="assets/js/site.js?v=21"></script>
   <script>
     function getProjectImage(item) {
       const text = [item.category, item.title, item.description, item.keywords].join(' ');
@@ -188,7 +188,12 @@
         const latest = items
           .slice()
           .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')) || Number(b.id || 0) - Number(a.id || 0))
-          .filter((item) => /产品|新品|案例|项目|发布/.test([item.category, item.title, item.keywords].join(' ')))
+          .filter((item) => {
+            const text = [item.category, item.title, item.description, item.keywords].join(' ');
+            const isPublicProject = /产品|新品|案例|项目|装置|夜游|发布/.test(text);
+            const isInternalOrAiOnly = /测试|测试发布|GEO\s*答案|GEO专题|AI搜索|提示词|GPT-image|prompt/i.test(text);
+            return isPublicProject && !isInternalOrAiOnly;
+          })
           .slice(0, 3);
         if (!latest.length) return;
         grid.innerHTML = latest.map((item) => `
