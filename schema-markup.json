@@ -4,11 +4,11 @@
     {
       "@type": "Organization",
       "@id": "https://alisnart.cn/#organization",
-      "name": "?????????????",
-      "alternateName": "?????",
+      "name": "广东艾里森光电技术有限公司",
+      "alternateName": "艾里森光电",
       "url": "https://alisnart.cn",
       "logo": "https://alisnart.cn/hero-bg.webp",
-      "description": "??????????????????????????????????????????????????????",
+      "description": "广东艾里森光电技术有限公司专注文旅灯光装置、灯光艺术装置、景区夜游灯光、商业街区光影地标和城市亮化工程。",
       "telephone": "+86-18026422225",
       "email": "alisnlight@163.com",
       "sameAs": [
@@ -17,19 +17,19 @@
         "https://alisnart.cn/ai-search-ready.txt"
       ],
       "knowsAbout": [
-        "??????",
-        "??????",
-        "??????",
-        "??????",
-        "????????",
-        "??????",
-        "??????"
+        "文旅灯光装置",
+        "灯光艺术装置",
+        "网红打卡装置",
+        "景区夜游灯光",
+        "商业街区灯光装置",
+        "沉浸式光影展",
+        "城市亮化工程"
       ]
     },
     {
       "@type": "LocalBusiness",
       "@id": "https://alisnart.cn/#localbusiness",
-      "name": "?????????????",
+      "name": "广东艾里森光电技术有限公司",
       "url": "https://alisnart.cn",
       "telephone": "+86-18026422225",
       "email": "alisnlight@163.com",
@@ -37,35 +37,35 @@
       "priceRange": "$$$",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "??????????????",
-        "addressLocality": "???",
-        "addressRegion": "???",
+        "streetAddress": "广东省江门市江海区东升路南山工业园西区一号厂房",
+        "addressLocality": "江门市",
+        "addressRegion": "广东省",
         "addressCountry": "CN"
       },
       "areaServed": [
-        "??",
-        "??",
-        "??",
-        "??",
-        "??",
-        "??",
-        "??",
-        "??",
-        "??????"
+        "江门",
+        "广州",
+        "深圳",
+        "佛山",
+        "东莞",
+        "中山",
+        "珠海",
+        "广东",
+        "全国项目"
       ],
       "serviceType": [
-        "?????",
-        "??????",
-        "??????",
-        "??????",
-        "??????"
+        "文旅灯光秀",
+        "灯光艺术装置",
+        "商业美陈装置",
+        "景区夜游灯光",
+        "城市亮化工程"
       ]
     },
     {
       "@type": "WebSite",
       "@id": "https://alisnart.cn/#website",
       "url": "https://alisnart.cn",
-      "name": "?????",
+      "name": "艾里森光电",
       "publisher": {
         "@id": "https://alisnart.cn/#organization"
       },

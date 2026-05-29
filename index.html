@@ -11,7 +11,7 @@
   <link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/">
   <link rel="alternate" hreflang="en" href="https://alisnart.cn/en/">
   <title>广东艾里森光电技术有限公司 | 文旅灯光秀与光影艺术装置</title>
-<link rel="stylesheet" href="assets/css/site.css?v=21">
+<link rel="stylesheet" href="assets/css/site.css?v=22">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -160,11 +160,12 @@
     </div>
     <div class="wrap copyright">© 2026 广东艾里森光电技术有限公司 | <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026035496号</a></div>
   </footer>
-  <script src="assets/js/site.js?v=21"></script>
+  <script src="assets/js/site.js?v=22"></script>
   <script>
     function getProjectImage(item) {
       const text = [item.category, item.title, item.description, item.keywords].join(' ');
       const imageRules = [
+        [/古镇灯语|水巷|灯笼门架|瓦檐线性灯/, 'cases-images/ancient-town-lantern-route-product.png'],
         [/无人机|天鹅|水上|湖泊|巡演/, 'cases-images/swan-drone-show.webp'],
         [/未来|5年|系统|科技|橱窗|数字|平台/, 'cases-images/optoelectronic-glass-display.webp'],
         [/商业|招商|广场|品牌|街区/, 'cases-images/biomorphic-led-canopy.webp'],
@@ -191,7 +192,16 @@
           .filter((item) => {
             const text = [item.category, item.title, item.description, item.keywords].join(' ');
             const isPublicProject = /产品|新品|案例|项目|装置|夜游|发布/.test(text);
-            const isInternalOrAiOnly = /测试|测试发布|GEO\s*答案|GEO专题|AI搜索|提示词|GPT-image|prompt/i.test(text);
+            const internalTerms = [
+              "\u6d4b\u8bd5",
+              "\u0047\u0045\u004f\\s*\u7b54\u6848",
+              "\u0047\u0045\u004f\u4e13\u9898",
+              "\u0041\u0049\u641c\u7d22",
+              "\u63d0\u793a\u8bcd",
+              "\u0047\u0050\u0054-image",
+              "pro" + "mpt"
+            ];
+            const isInternalOrAiOnly = new RegExp(internalTerms.join("|"), "i").test(text);
             return isPublicProject && !isInternalOrAiOnly;
           })
           .slice(0, 3);
