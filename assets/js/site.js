@@ -59,43 +59,59 @@ if (estimator) {
   const scenes = {
     scenic: {
       title: "景区主游线",
-      modules: ["入口光影门", "主拍照装置", "导视灯线", "终点演艺节点"],
-      advice: "先用入口仪式感和 2-3 个强记忆点拉出主游线，再决定是否增加投影、雾森或演艺内容。"
+      image: "cases-images/golden-leaf-tunnel.webp",
+      modules: ["入口光影门", "2-3 个主拍照装置", "低眩光导视灯线", "终点演艺或消费节点"],
+      advice: "先用入口仪式感和强记忆点拉出主游线，再决定是否增加投影、雾森或演艺内容。",
+      constraint: "主游线要控制眩光和排队拥堵，检修口不要放在游客拍照正面。"
     },
     lake: {
       title: "湖面演艺",
-      modules: ["湖心浮台", "岸线补光", "RGBW 演艺灯具", "一键开演控制"],
-      advice: "先确认水深、锚泊、岸电和观演方向，再配置灯具密度和节目时长。"
+      image: "cases-images/case-water-show.webp",
+      modules: ["湖心浮台或岸线主秀", "岸线补光", "RGBW 演艺灯具", "一键开演控制"],
+      advice: "先确认水深、锚泊、岸电和观演方向，再配置灯具密度和节目时长。",
+      constraint: "湖面项目优先核查水位变化、强风、漏保、锚固和夜间维护通道。"
     },
     street: {
       title: "商业街区",
+      image: "cases-images/crystal-gate-lanterns.webp",
       modules: ["节庆门头", "可换主题灯饰", "互动橱窗", "街区导流节点"],
-      advice: "重点做可复用、可换主题、可拍照传播的装置，让每个节日都能低成本更新。"
+      advice: "重点做可复用、可换主题、可拍照传播的装置，让每个节日都能低成本更新。",
+      constraint: "商业街要给消防通道、店招、雨棚和临时活动预留净空。"
     },
     commercial: {
       title: "商业街区",
+      image: "cases-images/crystal-gate-lanterns.webp",
       modules: ["节庆门头", "可换主题灯饰", "互动橱窗", "街区导流节点"],
-      advice: "重点做可复用、可换主题、可拍照传播的装置，让每个节日都能低成本更新。"
+      advice: "重点做可复用、可换主题、可拍照传播的装置，让每个节日都能低成本更新。",
+      constraint: "商业街要给消防通道、店招、雨棚和临时活动预留净空。"
     },
     town: {
       title: "古镇夜游",
+      image: "cases-images/ancient-town-lantern-route-hero.png",
       modules: ["牌坊入口", "水巷灯影", "非遗主题装置", "小型光影演出"],
-      advice: "控制光污染，把建筑、街巷、水面和地方文化串成慢游路线。"
+      advice: "控制光污染，把建筑、街巷、水面和地方文化串成慢游路线。",
+      constraint: "古镇项目要避开文保立面破坏，灯具安装尽量可逆、可检修。"
     },
     city: {
       title: "城市更新",
+      image: "cases-images/lantern-tree-plaza.webp",
       modules: ["建筑立面光影", "街区节点装置", "公共艺术灯光", "慢行导视系统"],
-      advice: "先打造一段可被市民记住的夜间界面，再逐步扩展到街区和城市更新片区。"
+      advice: "先打造一段可被市民记住的夜间界面，再逐步扩展到街区和城市更新片区。",
+      constraint: "城市更新要兼顾居民眩光投诉、交通视线和长期电费。"
     },
     stage: {
       title: "舞台演艺",
+      image: "cases-images/swan-drone-show.webp",
       modules: ["演艺灯具", "舞台机械接口", "节目控制系统", "观众区补光"],
-      advice: "把灯光、机械、屏幕和表演节奏一起设计，优先保证现场安全与维护效率。"
+      advice: "把灯光、机械、屏幕和表演节奏一起设计，优先保证现场安全与维护效率。",
+      constraint: "演艺项目要提前确认承重、吊点、控制室视线和应急切换。"
     },
     hotel: {
       title: "酒店入口",
+      image: "cases-images/tropical-resort-archway.webp",
       modules: ["迎宾光廊", "品牌发光装置", "车道引导灯", "节庆换装系统"],
-      advice: "优先解决第一眼识别、夜间到达感和社媒拍照点，不建议一开始做复杂演艺。"
+      advice: "优先解决第一眼识别、夜间到达感和社媒拍照点，不建议一开始做复杂演艺。",
+      constraint: "酒店入口要把车行视线、门童动线、雨棚高度和品牌色温统一考虑。"
     }
   };
 
@@ -113,6 +129,16 @@ if (estimator) {
     renewal: "城市更新"
   };
 
+  function escapeHtml(value) {
+    return value.replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#39;"
+    })[char]);
+  }
+
   function render() {
     const scene = scenes[estimator.querySelector("[name='type']")?.value] || scenes.scenic;
     const budget = budgets[estimator.querySelector("[name='budget']")?.value] || budgets.standard;
@@ -121,12 +147,20 @@ if (estimator) {
     const goal = goals[goalValue] || goalValue || goals.photo;
     const note = estimator.querySelector("[name='note']")?.value?.trim() || "";
     const scaleLabel = scale === "district" ? "片区级" : scale === "route" ? "动线级" : "单点级";
+    const routeFocus = scale === "district"
+      ? "先划分入口、主街、水面/广场和收尾消费区，分期落地。"
+      : scale === "route"
+        ? "建议用 300-800 米动线组织节奏，每 80-150 米设置一个停留点。"
+        : "单点装置要优先做成高识别拍照面，同时把底座、检修和供电隐藏好。";
 
     output.innerHTML = `
+      <figure class="result-visual">
+        <img src="${scene.image}" alt="${scene.title}灯光艺术装置参考场景">
+      </figure>
       <div class="result-head">
         <span class="tag">预估方案</span>
         <h2>${scene.title} · ${budget.level}</h2>
-        <p>${scaleLabel}项目，核心目标是${goal}。${scene.advice}</p>
+        <p>${scaleLabel}项目，核心目标是${goal}。${scene.advice}${routeFocus}</p>
       </div>
       <div class="result-metrics">
         <div><strong>${budget.label}</strong><span>建议预算</span></div>
@@ -138,9 +172,13 @@ if (estimator) {
         <ul>${scene.modules.map((item) => `<li>${item}</li>`).join("")}</ul>
       </div>
       <div class="result-block">
+        <h3>工程约束</h3>
+        <p>${scene.constraint} 户外部分建议按 IP65、耐候结构、隐藏检修口和独立控制回路预留。</p>
+      </div>
+      <div class="result-block">
         <h3>下一步资料</h3>
         <p>准备现场照片、平面尺寸、供电位置、开放时间、目标客流和预算上限，我们可以据此输出可报价的深化方案。</p>
-        ${note ? `<p class="note"><strong>现场备注：</strong>${note}</p>` : ""}
+        ${note ? `<p class="note"><strong>现场备注：</strong>${escapeHtml(note)}</p>` : ""}
       </div>
     `;
   }
