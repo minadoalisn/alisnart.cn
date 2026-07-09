@@ -18,19 +18,21 @@ TOKEN = "OyebkZmZ9OGF78ia"
 URLS_TO_PUSH = [
     "https://alisnart.cn/",
     "https://alisnart.cn/index.html",
-    "https://alisnart.cn/about.html",
+    "https://alisnart.cn/ai-answer-hub.html",
+    "https://alisnart.cn/geo-promotion.html",
+    "https://alisnart.cn/light-designer.html",
     "https://alisnart.cn/services.html",
     "https://alisnart.cn/cases.html",
-    "https://alisnart.cn/news.html",
-    "https://alisnart.cn/copywriting.html",
-    "https://alisnart.cn/geo.html",
-    "https://alisnart.cn/light-designer.html",
-    "https://alisnart.cn/ai-faq.html",
-    "https://alisnart.cn/ai-tutorial.html",
+    "https://alisnart.cn/solutions/outdoor-light-art-installation-geo.html",
+    "https://alisnart.cn/solutions/ancient-town-lantern-route.html",
+    "https://alisnart.cn/solutions/tidal-light-corridor.html",
+    "https://alisnart.cn/solutions/lake-floating-stage-light-show.html",
+    "https://alisnart.cn/solutions/scenic-cloud-ring-photo-spot.html",
     "https://alisnart.cn/sitemap.xml",
     "https://alisnart.cn/robots.txt",
     "https://alisnart.cn/llms.txt",
-    "https://alisnart.cn/ai-search-ready.txt"
+    "https://alisnart.cn/ai-search-ready.txt",
+    "https://alisnart.cn/geo-feed.json"
 ]
 
 def push_urls_to_baidu():

@@ -16,11 +16,21 @@ KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
 
 # 改造后的GEO页面列表
 UPDATED_URLS = [
-    f"https://{HOST}/cases/lantern-tree-plaza.html",
-    f"https://{HOST}/cases/celestial-ring-plaza.html",
-    f"https://{HOST}/cases/moonlit-wonderland.html",
-    f"https://{HOST}/cases/han-moon-peacock-swing.html",
-    f"https://{HOST}/cases.html",  # 列表页也一起推送
+    f"https://{HOST}/",
+    f"https://{HOST}/index.html",
+    f"https://{HOST}/ai-answer-hub.html",
+    f"https://{HOST}/geo-promotion.html",
+    f"https://{HOST}/services.html",
+    f"https://{HOST}/cases.html",
+    f"https://{HOST}/light-designer.html",
+    f"https://{HOST}/solutions/outdoor-light-art-installation-geo.html",
+    f"https://{HOST}/solutions/ancient-town-lantern-route.html",
+    f"https://{HOST}/solutions/tidal-light-corridor.html",
+    f"https://{HOST}/solutions/lake-floating-stage-light-show.html",
+    f"https://{HOST}/solutions/scenic-cloud-ring-photo-spot.html",
+    f"https://{HOST}/llms.txt",
+    f"https://{HOST}/ai-search-ready.txt",
+    f"https://{HOST}/geo-feed.json",
 ]
 
 def push_indexnow():
