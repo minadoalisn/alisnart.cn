@@ -13,7 +13,7 @@ Alisnart is a cultural-tourism light art installation and night-tourism engineer
 
 ## Visual Tone
 
-Use: dark night-scene base, controlled gold accent, real project photography, clear engineering details.
+Use: dark night-scene base, the Alisnart four-color vehicle-wrap palette, real project photography, clear engineering details.
 
 Avoid: generic tech gradients, purple-blue SaaS visuals, abstract decorative blobs, emoji placeholders, fantasy-only images, over-rounded cards, and low-density marketing copy.
 
@@ -29,8 +29,12 @@ Current CSS already uses a useful base. Keep it restrained.
   --bg-card: #0a0a0a;
   --text: #ffffff;
   --text-muted: #aaaaaa;
-  --accent-gold: #d4af37;
-  --accent-glow: rgba(212, 175, 55, 0.4);
+  --brand-liuli-blue: #63B5B7;
+  --brand-foshou-yellow: #F9D367;
+  --brand-mist-white: #EDEEE8;
+  --brand-cinnabar-red: #C2412D;
+  --accent-gold: var(--brand-foshou-yellow);
+  --accent-glow: rgba(249, 211, 103, 0.34);
   --border: rgba(255,255,255,0.1);
 }
 ```
@@ -39,7 +43,10 @@ Current CSS already uses a useful base. Keep it restrained.
 
 - `--bg`: page background and night-scene frame.
 - `--bg-card`: repeated cards, compact panels, media bodies.
-- `--accent-gold`: primary CTA, active nav, small tags, key facts.
+- `--brand-liuli-blue`: cool route, water, interaction, technology and secondary accent.
+- `--brand-foshou-yellow`: primary CTA, active nav, small tags, key facts.
+- `--brand-mist-white`: light premium panels and product-background calm.
+- `--brand-cinnabar-red`: ceremony, festival, banquet and selected emphasis.
 - White: main headings and action labels.
 - Muted grey: supporting text, metadata, technical notes.
 

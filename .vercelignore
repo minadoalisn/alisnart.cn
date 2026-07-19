@@ -1,0 +1,27 @@
+# Secrets and local credentials
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+
+# Local operations and repository internals
+.git
+.vercel
+reports
+docs
+social_media_content
+*.bak
+*.b64
+*.ps1
+*.sh
+
+# Internal planning material
+*_PLAN.md
+*_REPORT.md
+*_GUIDE.md
+JARVIS_MODE_STATUS.md
+VIDEO_PROMPTS.md
+XIAOHONGSHU_*.md
+车衣设计.png

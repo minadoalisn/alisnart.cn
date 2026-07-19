@@ -22,7 +22,7 @@ The emotional hierarchy is:
 Key characteristics:
 
 - Dark night-gallery canvas.
-- Warm gold accent used sparingly.
+- Four brand colors from the Alisnart vehicle-wrap palette used deliberately, not as a decorative rainbow.
 - Photography and generated realistic installation images carry the visual impact.
 - UI surfaces are restrained, with 8px or smaller radius.
 - Buyer-facing copy is concrete and operational.
@@ -30,30 +30,48 @@ Key characteristics:
 - English and Chinese contact channels can differ and must not be mixed.
 - No public-facing page should look like it was generated from a prompt.
 
+### 2026 Premium Product Storytelling Direction
+
+Reading this as: a B2B light-art and night-tourism company site for project owners, planners, designers, and procurement teams, with a cinematic dark base and Alisnart's four-color vehicle-wrap palette, leaning toward Apple-style hierarchy, restraint, pacing, and full-bleed product storytelling without copying Apple assets or layouts.
+
+- One viewport communicates one dominant idea.
+- Use short, large headlines followed by one concrete operational explanation.
+- Replace equal-weight card walls with full-width scene panels, editorial splits, and sticky story sections.
+- Use motion only for reveal, focus, and progression; never use decorative particles, blobs, or scroll hijacking.
+- Use the system font stack; do not download or imitate proprietary Apple fonts.
+- Preserve canonical URLs, GEO answers, contact channels, and language variants during the redesign.
+- Remove unsupported project counts, coverage counts, certifications, warranties, and exact performance claims.
+
 ## 2. Color Palette & Roles
 
 ### Primary
 
 - **Night Black** `#050505` - main page background.
 - **Deep Surface** `#0a0a0a` - cards, media bodies, alternate sections.
-- **Alisnart Gold** `#d4af37` - primary CTA, active nav, tags, key facts.
+- **琉璃蓝 / Liuli Blue** `#63B5B7` - calm technology, water, routes, interaction, secondary gradients, cool scene accents.
+- **佛手黄 / Foshou Yellow** `#F9D367` - primary CTA, active nav, tags, key facts, high-value moments.
+- **辰雾白 / Mist White** `#EDEEE8` - light panels, premium negative space, product backgrounds, readable contrast on dark scenes.
+- **朱砂红 / Cinnabar Red** `#C2412D` - restrained emphasis for ceremony, festival, banquet, conversion cues, and selected hover accents.
 
 ### Text
 
-- **Pure White** `#ffffff` - headings, primary button labels, key UI labels.
+- **Pure White** `#ffffff` - headings, key UI labels on dark backgrounds.
 - **Soft Grey** `#aaaaaa` - body copy, metadata, secondary descriptions.
 - **Dim Grey** `rgba(255,255,255,0.62)` - tertiary details only.
 
 ### Structure
 
 - **Hairline Border** `rgba(255,255,255,0.1)` - card borders, section separators.
-- **Gold Glow** `rgba(212,175,55,0.4)` - used only on important hover/focus states.
+- **Yellow Glow** `rgba(249,211,103,0.34)` - used only on important hover/focus states.
 
 ### Rules
 
-- Gold is a signal color, not a background theme.
+- The four-color palette comes from `D:/艾里森官网/车衣设计.png` and is now the Alisnart brand palette.
+- Yellow is a signal color, not a background theme.
+- Blue and red can appear in subtle layered gradients, image overlays, icons, and business-card accents.
+- Mist white can support premium light sections; it must not become a beige/tan luxury theme.
 - Do not add purple-blue gradients, beige/brown luxury palettes, or random neon colors.
-- Do not put gold text on gold backgrounds.
+- Do not put yellow text on yellow backgrounds or red text on dark red backgrounds.
 - If a page feels monochrome, add better imagery before adding more colors.
 
 ## 3. Typography Rules
@@ -107,10 +125,10 @@ Mobile:
 
 Primary CTA:
 
-- Background `#d4af37`.
+- Background `#F9D367`.
 - Text `#000000`.
 - Height 52px desktop, at least 48px mobile.
-- Border radius 6px.
+- Border radius 999px is allowed only for primary/secondary action capsules in the premium direction.
 - Hover: white or brighter gold with subtle glow.
 
 Secondary CTA:
@@ -126,7 +144,7 @@ Default:
 
 - Background `rgba(255,255,255,0.02)`.
 - Border `1px solid rgba(255,255,255,0.1)`.
-- Radius 8px maximum.
+- Radius 12px maximum for repeated cards; cinematic scene panels may use 24px when the image is the main content.
 - Padding 22-28px.
 - Hover may lift slightly, but never rely on hover for meaning.
 
@@ -172,6 +190,15 @@ Use an 8px base rhythm:
 - Desktop section padding: 80-100px.
 - Mobile section padding: 48-64px.
 - Every section should communicate one major idea.
+- Premium story sections may use 120-180px vertical space on desktop when the extra space strengthens focus.
+- Avoid using a three-card grid more than once on a page.
+
+### Full-Site Migration
+
+- Homepage, services, cases, about, insights, estimator, core English pages, solution templates, and case templates must share the same navigation, typography, buttons, footer, and conversion path.
+- Long-tail pages inherit the global system even when their editorial content is not rewritten.
+- Completed projects and concept references must be visibly distinguished.
+- Every commercial page ends with the same project-brief action, not a different disconnected CTA.
 
 ### First Viewport
 
@@ -350,7 +377,8 @@ Social Media
 Facebook: https://www.facebook.com/alisnartsculpture/
 Instagram: https://www.instagram.com/vicky_alisnart/
 LinkedIn: www.linkedin.com/in/vicky-llh
-WhatsApp: +86 15791503693
+WhatsApp: +86 18026422225
+Email: lansenlight@gmail.com
 Xiaohongshu IDs: 26812150420，94106741441
 
 All pictures, videos and project cases published on our official website and above social platforms including Xiaohongshu can be directly used for proposal design reference
