@@ -147,7 +147,8 @@ Social Media
 Facebook: https://www.facebook.com/alisnartsculpture/
 Instagram: https://www.instagram.com/vicky_alisnart/
 LinkedIn: www.linkedin.com/in/vicky-llh
-WhatsApp: +86 15791503693
+WhatsApp: +86 18026422225
+Email: lansenlight@gmail.com
 Xiaohongshu IDs: 26812150420，94106741441
 
 All pictures, videos and project cases published on our official website and above social platforms including Xiaohongshu can be directly used for proposal design reference

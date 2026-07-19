@@ -40,12 +40,10 @@ TEST_URLS = {
     "英文孔雀秋千": f"{SITE_BASE}/en_site/projects/han-moon-peacock-swing.html",
 }
 
-# 必需的社交联系方式（英文站）
+# 必需的受控联系方式
 REQUIRED_CONTACTS = [
-    "15791503693",
-    "Facebook",
-    "Instagram",
-    "LinkedIn"
+    "18026422225",
+    "lansenlight@gmail.com",
 ]
 
 # 必需百度统计ID

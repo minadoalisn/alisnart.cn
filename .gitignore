@@ -32,3 +32,12 @@ build/
 *.temp
 .cache/
 .vercel
+
+# Private keys and certificates must never be committed
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local brand source artwork; deploy the optimized logo asset instead
+车衣设计.png
