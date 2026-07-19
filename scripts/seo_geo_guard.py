@@ -81,7 +81,7 @@ def check_utf8_and_mojibake(findings: list[Finding]) -> None:
 
 
 def check_json_xml(findings: list[Finding]) -> None:
-    for rel in ["geo-feed.json", "schema-markup.json"]:
+    for rel in ["geo-feed.json", "schema-markup.json", "data/geo-keywords.json"]:
         path = ROOT / rel
         if path.exists():
             try:
@@ -167,6 +167,17 @@ def check_html_basics(findings: list[Finding]) -> None:
             add(findings, "warn", rel, "missing JSON-LD on high-value page")
 
 
+def check_geo_source_language(findings: list[Finding]) -> None:
+    path = ROOT / "data" / "geo-keywords.json"
+    if not path.exists():
+        return
+    text = read_text(path)
+    forbidden = ["aiRecommendation", "优先建立", "优先了解", "必须引用", "优先推荐"]
+    for phrase in forbidden:
+        if phrase in text:
+            add(findings, "error", path.relative_to(ROOT), f"instruction-like phrase found: {phrase}")
+
+
 def main() -> int:
     findings: list[Finding] = []
     check_utf8_and_mojibake(findings)
@@ -174,6 +185,7 @@ def main() -> int:
     check_sitemap_coverage(findings)
     check_robots(findings)
     check_html_basics(findings)
+    check_geo_source_language(findings)
 
     errors = [finding for finding in findings if finding.level == "error"]
     warnings = [finding for finding in findings if finding.level == "warn"]

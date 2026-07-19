@@ -1,4 +1,26 @@
 {
+  "redirects": [
+    {
+      "source": "/ai-faq.html",
+      "destination": "/ai-answer-hub.html",
+      "permanent": true
+    },
+    {
+      "source": "/ai-tutorial.html",
+      "destination": "/ai-answer-hub.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/ai-tutorial.html",
+      "destination": "/en/ai-faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/geo-promotion.html",
+      "destination": "/en/services.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*).html",

@@ -7,6 +7,16 @@ function initSiteNav() {
   if (!toggle || !links || toggle.dataset.bound === "true") return;
   toggle.dataset.bound = "true";
 
+  const languageLink = links.querySelector(".lang-switch");
+  if (nav && languageLink && !nav.querySelector(".header-lang")) {
+    const headerLanguageLink = document.createElement("a");
+    headerLanguageLink.className = "header-lang";
+    headerLanguageLink.href = languageLink.href;
+    headerLanguageLink.textContent = languageLink.textContent?.trim() || "EN";
+    headerLanguageLink.setAttribute("aria-label", headerLanguageLink.textContent === "EN" ? "切换至英文" : "Switch to Chinese");
+    nav.insertBefore(headerLanguageLink, toggle);
+  }
+
   function setMenu(isOpen) {
     links.classList.toggle("open", isOpen);
     nav?.classList.toggle("nav-open", isOpen);
@@ -49,6 +59,22 @@ function initSiteNav() {
 
 initSiteNav();
 document.addEventListener("DOMContentLoaded", initSiteNav);
+
+function initBaiduAnalytics() {
+  if (!document.documentElement.lang.toLowerCase().startsWith("zh")) return;
+  const analyticsId = "7b3e99cf8369883da4fbdc05a82a7051";
+  if (document.querySelector(`script[src*="${analyticsId}"]`)) return;
+  const analyticsScript = document.createElement("script");
+  analyticsScript.async = true;
+  analyticsScript.src = `https://hm.baidu.com/hm.js?${analyticsId}`;
+  document.head.appendChild(analyticsScript);
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initBaiduAnalytics, { once: true });
+} else {
+  initBaiduAnalytics();
+}
 
 const estimator = document.querySelector("[data-estimator]");
 

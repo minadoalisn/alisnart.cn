@@ -33,17 +33,21 @@ TEST_URLS = {
     "月下仙境详情": f"{SITE_BASE}/cases/moonlit-wonderland.html",
     "天环广场详情": f"{SITE_BASE}/cases/celestial-ring-plaza.html",
     "孔雀秋千详情": f"{SITE_BASE}/cases/han-moon-peacock-swing.html",
-    "英文首页": f"{SITE_BASE}/en_site/index.html",
-    "英文华灯树": f"{SITE_BASE}/en_site/projects/lantern-tree-plaza.html",
-    "英文月下仙境": f"{SITE_BASE}/en_site/projects/moonlit-wonderland.html",
-    "英文天环广场": f"{SITE_BASE}/en_site/projects/celestial-ring-plaza.html",
-    "英文孔雀秋千": f"{SITE_BASE}/en_site/projects/han-moon-peacock-swing.html",
+    "英文首页": f"{SITE_BASE}/en/",
+    "英文服务": f"{SITE_BASE}/en/services.html",
+    "英文方案参考": f"{SITE_BASE}/en/cases.html",
+    "英文洞察": f"{SITE_BASE}/en/news.html",
 }
 
 # 必需的受控联系方式
 REQUIRED_CONTACTS = [
-    "18026422225",
-    "lansenlight@gmail.com",
+    "www.alisnart.com",
+    "facebook.com/alisnartsculpture",
+    "instagram.com/vicky_alisnart",
+    "linkedin.com/in/vicky",
+    "15791503693",
+    "26812150420",
+    "94106741441",
 ]
 
 # 必需百度统计ID
@@ -106,12 +110,12 @@ def check_page(name, url):
                         css_versions.append(int(match.group(1)))
         
         # 检查5: 百度统计代码（仅中文站）
-        if not url.startswith(f"{SITE_BASE}/en_site/"):
-            if BAIDU_ANALYTICS_ID not in html:
+        if not url.startswith(f"{SITE_BASE}/en/"):
+            if BAIDU_ANALYTICS_ID not in html and "assets/js/site.js" not in html:
                 issues.append("⚠️ 缺少百度统计")
         
         # 检查6: 社交联系方式（仅英文站）
-        if url.startswith(f"{SITE_BASE}/en_site/projects/"):
+        if url.startswith(f"{SITE_BASE}/en/"):
             missing_contacts = [c for c in REQUIRED_CONTACTS if c not in html]
             if missing_contacts:
                 issues.append(f"⚠️ 缺少联系方式: {', '.join(missing_contacts)}")
