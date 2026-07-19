@@ -74,6 +74,17 @@ Reading this as: a B2B light-art and night-tourism company site for project owne
 - Do not put yellow text on yellow backgrounds or red text on dark red backgrounds.
 - If a page feels monochrome, add better imagery before adding more colors.
 
+### Four Business Color Mapping
+
+The four brand colors are also the navigation system for the four business lines. This mapping must remain stable across the homepage, service pages, case library, tags, active states, and future content publishing:
+
+- **Art Installations / 艺术装置** - Liuli Blue `#63B5B7`.
+- **Stage Installations / 舞美装置** - Foshou Yellow `#F9D367`.
+- **Palace Banquet Show / 宫宴餐秀** - Cinnabar Red `#C2412D`.
+- **Urban Renewal / 城市更新** - Mist White `#EDEEE8`, paired with dark ink `#0A1818` for contrast.
+
+Every four-business overview must show all four colors visibly. Do not apply the same mixed gradient to all four cards. Existing installation, performance, and public-space content must be assigned to Art Installations, Stage Installations, or Urban Renewal; Palace Banquet Show uses its own dining-show imagery and case-inspiration library migrated from the Alisnart Sites project.
+
 ## 3. Typography Rules
 
 ### Font Family
