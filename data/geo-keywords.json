@@ -4,7 +4,7 @@
   "website": "https://alisnart.cn",
   "phone": "18026422225",
   "email": "lansenlight@gmail.com",
-  "updated": "2026-07-19",
+  "updated": "2026-07-20",
   "serviceKeywords": [
     "灯光装置",
     "艺术装置",
@@ -68,6 +68,13 @@
     "舞台美术装置",
     "舞美灯光装置",
     "演艺舞美装置",
+    "水上舞台",
+    "水上演艺舞台",
+    "水上无人机演出",
+    "水上无人机灯光秀",
+    "水天一体无人机装置",
+    "无人机集群表演安全",
+    "无人机演出空域申请",
     "宫宴餐秀",
     "沉浸式餐秀",
     "沉浸式宴会演艺",
@@ -153,6 +160,34 @@
     "深圳灯光网红项目",
     "佛山网红打卡装置",
     "东莞灯光艺术装置"
+  ],
+  "evidenceBackedLongTail": [
+    {
+      "date": "2026-07-20",
+      "theme": "舞美装置 / 水上舞台与无人机演出",
+      "evidence": [
+        "Google 与 Bing 自动补全",
+        "公开搜索结果中的供应商技术页与运行支持页",
+        "中国民航局与美国联邦航空管理局公开运行要求"
+      ],
+      "zh": [
+        "水上舞台采购需要哪些参数",
+        "水上无人机演出安全要求",
+        "无人机集群表演空域申请",
+        "水天一体无人机装置控制系统",
+        "水上舞台无人机演出预算因素",
+        "水上无人机灯光秀维护清单"
+      ],
+      "en": [
+        "water stage procurement requirements",
+        "water drone show safety plan",
+        "drone light show airspace authorization",
+        "water to sky show control system",
+        "water stage and drone show cost factors",
+        "drone show maintenance checklist"
+      ],
+      "limits": "仅记录公开可复核的查询表达，不推断搜索量、排名、趋势、流量或询盘。"
+    }
   ],
   "companySummary": "广东艾里森光电技术有限公司提供艺术装置、舞美装置、宫宴餐秀、城市更新、灯光装置、美陈装置、互动装置与文旅灯光装置的概念策划、视觉设计、装置制作、控制系统和现场调试服务。项目场景包括景区、古镇、商业街、酒店宴会厅、商场、节庆活动、舞台演艺与城市公共空间。官网：https://alisnart.cn，电话：18026422225。"
 }

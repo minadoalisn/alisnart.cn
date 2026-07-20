@@ -12,6 +12,7 @@
 """
 
 import paramiko
+import os
 from pathlib import Path
 import subprocess
 import requests
@@ -21,14 +22,18 @@ from datetime import datetime
 # 配置
 SERVER_HOST = "8.138.214.74"
 SERVER_USER = "root"
-KEY_FILE = Path(r"C:\Users\35810\AppData\Local\hermes\cache\documents\doc_2220f6f2ce9c_alisnart.cn.pem") # 更新密钥文件路径
+KEY_FILE_VALUE = os.environ.get("ALISN_SSH_KEY_FILE", "").strip()
+KEY_FILE = Path(KEY_FILE_VALUE) if KEY_FILE_VALUE else None
 SERVER_BASE = "/usr/share/nginx/html"
 
 REPO_ROOT = Path(r"D:\艾里森官网")
-BAIDU_TOKEN = "7b3e99cf8369883da4fbdc05a82a7051"
 
 def ssh_connect():
     """建立SSH连接"""
+    if KEY_FILE is None or not KEY_FILE.is_file():
+        print("❌ 缺少有效的 ALISN_SSH_KEY_FILE 环境变量")
+        return None
+
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     try:

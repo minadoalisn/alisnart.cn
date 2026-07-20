@@ -50,9 +50,9 @@
    ```
 
 #### 步骤3：使用百度准入密钥推送
-- **准入密钥**: `OyebkZmZ9OGF78ia`
-- **推送接口**: `http://data.zz.baidu.com/urls?site=alisnart.cn&token=OyebkZmZ9OGF78ia`
-- 开心已创建推送脚本，可以随时执行
+- 准入密钥不得写入仓库；请在本机或 CI 中设置 `BAIDU_PUSH_TOKEN` 环境变量。
+- 推送接口由脚本在运行时组合：`http://data.zz.baidu.com/urls?site=alisnart.cn&token=<BAIDU_PUSH_TOKEN>`。
+- `push_to_baidu.py` 与 `push_to_baidu.sh` 在缺少环境变量时会停止，不会发送空令牌请求。
 
 ---
 

@@ -3,8 +3,8 @@
 # 自动推送网站所有页面到百度，加速收录
 
 # ================== 配置信息 ==================
-BAIDU_TOKEN="80e45d920116df0d1314378f0bf4b224"
-SITE_URL="http://8.138.214.74"
+BAIDU_TOKEN="${BAIDU_PUSH_TOKEN:-}"
+SITE_URL="https://alisnart.cn"
 PUSH_API="http://data.zz.baidu.com/urls?site=${SITE_URL}&token=${BAIDU_TOKEN}"
 
 # ================== 要推送的页面列表 ==================
@@ -19,6 +19,11 @@ URLS=(
 
 # ================== 推送函数 ==================
 push_urls() {
+    if [ -z "${BAIDU_TOKEN}" ]; then
+        echo "❌ 缺少 BAIDU_PUSH_TOKEN 环境变量，已停止推送。"
+        return 1
+    fi
+
     echo "=================================================="
     echo "百度搜索资源平台主动推送脚本"
     echo "=================================================="

@@ -7,12 +7,13 @@
 
 import requests
 import json
+import os
 from datetime import datetime
 
 # 百度推送配置
 BAIDU_PUSH_URL = "http://data.zz.baidu.com/urls"
 SITE = "alisnart.cn"
-TOKEN = "OyebkZmZ9OGF78ia"
+TOKEN = os.environ.get("BAIDU_PUSH_TOKEN", "").strip()
 
 # 需要推送的URL列表
 URLS_TO_PUSH = [
@@ -37,6 +38,10 @@ URLS_TO_PUSH = [
 
 def push_urls_to_baidu():
     """推送URL到百度搜索资源平台"""
+
+    if not TOKEN:
+        print("❌ 缺少 BAIDU_PUSH_TOKEN 环境变量，已停止推送。")
+        return False
     
     print("=" * 60)
     print("百度搜索资源平台 - 链接自动推送")
