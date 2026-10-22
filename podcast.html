@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="文旅新声播客：每天一期，聊文旅行业与艺术装置创新。沉浸式演艺、文旅夜游、灯光艺术装置、科技艺术前沿案例与行业判断，附完整音频与动画视频。">
+  <meta name="keywords" content="文旅播客,文旅行业播客,沉浸式演艺,文旅夜游,灯光艺术装置,艺术装置创新,夜游项目,广东艾里森光电">
+  <link rel="canonical" href="https://alisnart.cn/podcast.html">
+  <title>文旅新声播客｜艾里森光电</title>
+  <link rel="stylesheet" href="assets/css/site.css?v=33">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","@id":"https://alisnart.cn/podcast.html#webpage","url":"https://alisnart.cn/podcast.html","name":"文旅新声播客","description":"每天一期，聊文旅行业与艺术装置创新：沉浸式演艺、文旅夜游、灯光艺术装置与科技艺术。","isPartOf":{"@id":"https://alisnart.cn/#website"},"about":{"@id":"https://alisnart.cn/#organization"},"inLanguage":"zh-CN"}</script>
+</head>
+<body class="premium-interior">
+  <header class="site-header"><nav class="nav" aria-label="主导航"><a class="brand" href="index.html"><img class="brand-logo" src="/assets/alisn-logo-header.png" alt="艾里森 ALISN"></a><button class="nav-toggle" aria-label="打开导航" aria-expanded="false">☰</button><ul class="nav-links"><li><a href="index.html">首页</a></li><li><a href="art-installations.html">艺术装置</a></li><li><a href="stage-installations.html">舞美装置</a></li><li><a href="cultural-banquet-show.html">宫宴餐秀</a></li><li><a href="urban-renewal.html">城市更新</a></li><li><a href="cases.html">方案参考</a></li><li><a href="about.html">关于</a></li><li><a href="news.html">洞察</a></li><li><a class="active" href="podcast.html">播客</a></li><li><a href="light-designer.html">项目资料</a></li><li><a href="en/news.html" class="lang-switch">EN</a></li></ul></nav></header>
+  <main class="page">
+    <section class="hero compact-hero" style="--hero-image:url('/cases-images/celestial-ring-plaza.webp')">
+      <div class="wrap hero-content"><span class="eyebrow">PODCAST</span><h1>文旅新声，<br>每天聊点行业里的新东西。</h1><p class="lead">沉浸式演艺、文旅夜游、灯光艺术装置与科技艺术——每天一期，附完整音频与动画视频，通勤路上就能听完。</p></div>
+    </section>
+    <section class="section">
+      <div class="wrap"><div class="section-head"><span class="eyebrow">EPISODES</span><h2 class="section-title">往期节目。</h2><p class="section-copy">每期包含音频、动画视频与文字精要，关键词覆盖文旅夜游与艺术装置创新。</p></div><div class="grid" id="podcast-grid"><article class="card"><span class="tag">读取中</span><h3>正在整理节目</h3><p>请稍后刷新。</p></article></div></div>
+    </section>
+    <section class="section cta-band"><div class="wrap"><div class="cta-panel"><div><span class="eyebrow">YOUR PROJECT</span><h2>问题来自现场，答案也应该回到现场。</h2><p>生成项目摘要，把场地条件和目标放在同一份资料中。</p></div><div class="cta-actions"><a class="button primary" href="light-designer.html">整理项目资料</a></div></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><h3>广东艾里森光电技术有限公司</h3><p>灯光艺术装置、夜游项目与工程沟通方法。</p></div><div><h3>联系</h3><p><a href="tel:18026422225">18026422225</a><a href="mailto:lansenlight@gmail.com">lansenlight@gmail.com</a></p></div><div><h3>备案</h3><p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备2026035496号</a></p></div></div></footer>
+  <script src="assets/js/site.js?v=33"></script>
+  <script>
+    async function loadPodcast() {
+      const grid = document.getElementById('podcast-grid');
+      try {
+        const response = await fetch('data/podcast.json?v=' + Date.now(), { cache: 'no-store' });
+        if (!response.ok) throw new Error('Content request failed');
+        const items = await response.json();
+        const sorted = items
+          .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')) || Number(b.id || 0) - Number(a.id || 0))
+          .slice(0, 18);
+        grid.innerHTML = sorted.length ? sorted.map((item) => `
+          <a class="card" href="${item.url}">
+            <span class="tag">${item.category || '文旅新声'}</span>
+            <h3>${item.title || '播客节目'}</h3>
+            <p>${item.description || '文旅行业与艺术装置创新。'}</p>
+            <p style="margin-top:18px;font-size:13px;opacity:.65">${item.date || ''} · ${item.duration || ''}</p>
+          </a>`).join('') : '<article class="card"><h3>节目正在制作</h3><p>请稍后再来。</p></article>';
+      } catch (error) {
+        console.error(error);
+        grid.innerHTML = '<article class="card"><h3>内容暂时无法读取</h3><p>请稍后刷新。</p></article>';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', loadPodcast);
+  </script>
+</body>
+</html>
