@@ -40,18 +40,14 @@
       <div class="wrap">
         <div class="episode-media">
           <img src="https://drive.google.com/uc?id=1Mz5qKVFN4pI66g18sOa1s9l-CsXDBuCl&export=download" alt="文旅新声第八期封面">
-          <audio controls preload="metadata">
-            <source src="https://drive.google.com/uc?id=1KH385TtAs2XxrmrNdW-KhKfcQxH9LIeK&export=download" type="audio/mpeg">
-            <source src="https://muse.ai/podcasts/media/1288046567735045/e59fa403-9187-48dd-a3aa-facf98a31c25/ep-d87c808d-7bb7-43d2-9cdb-f87f6d3fe8e2.mp3" type="audio/mpeg">
+          <audio id="ep8-audio" controls preload="none">
             您的浏览器不支持音频播放。
           </audio>
+          <script>(function(){var a=document.getElementById('ep8-audio');fetch('ep8-audio.b64').then(function(r){return r.text();}).then(function(t){var s=t.replace(/\s/g,'');var b=atob(s);var u=new Uint8Array(b.length);for(var i=0;i<b.length;i++){u[i]=b.charCodeAt(i);}a.src=URL.createObjectURL(new Blob([u],{type:'audio/mpeg'}));}).catch(function(){a.src='https://muse.ai/podcasts/media/1288046567735045/e59fa403-9187-48dd-a3aa-facf98a31c25/ep-d87c808d-7bb7-43d2-9cdb-f87f6d3fe8e2.mp3';});})();</script>
           <div class="episode-meta"><span>🎧 音频版</span><span>🎬 动画视频版</span><span>📝 文字精要</span></div>
           <p class="audio-row"><a href="https://drive.google.com/uc?id=1KH385TtAs2XxrmrNdW-KhKfcQxH9LIeK&export=download" download>下载本期音频 MP3</a></p>
           <p class="audio-row" style="margin-top:26px">🎬 动画视频版</p>
-          <video controls preload="metadata" poster="https://drive.google.com/uc?id=1Mz5qKVFN4pI66g18sOa1s9l-CsXDBuCl&export=download">
-            <source src="https://drive.google.com/uc?id=1fD_KQ1McRlSoi7h5ao_66sqikqQRdm7q&export=download" type="video/mp4">
-            您的浏览器不支持视频播放。
-          </video>
+          <iframe src="https://drive.google.com/file/d/1fD_KQ1McRlSoi7h5ao_66sqikqQRdm7q/preview" allow="autoplay" style="width:100%;aspect-ratio:1/1;border:0;border-radius:12px;background:#000;margin-top:14px"></iframe>
           <p class="audio-row"><a href="https://drive.google.com/uc?id=1fD_KQ1McRlSoi7h5ao_66sqikqQRdm7q&export=download" download>下载动画视频 MP4</a></p>
         </div>
         <div class="shownotes">
