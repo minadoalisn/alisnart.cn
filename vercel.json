@@ -1,4 +1,7 @@
 {
+  "buildCommand": "node scripts/build-public-site.cjs",
+  "outputDirectory": ".public-site",
+  "ignoreCommand": "node -e \"process.exit(process.env.VERCEL_GIT_COMMIT_REF === 'main' && (process.env.VERCEL_GIT_COMMIT_MESSAGE || '').includes('[reviewed-cli-promotion]') ? 0 : 1)\"",
   "redirects": [
     {
       "source": "/ai-faq.html",

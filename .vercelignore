@@ -9,6 +9,16 @@
 # Local operations and repository internals
 .git
 .vercel
+.public-site
+node_modules
+tests
+**/*.md
+**/*.py
+**/*.pyc
+**/*.backup
+en_site
+admin.html
+*-final.html
 reports
 docs
 social_media_content
