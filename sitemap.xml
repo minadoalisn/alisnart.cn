@@ -147,22 +147,10 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://alisnart.cn/en/services.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://alisnart.cn/en/cases.html</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alisnart.cn/en/news.html</loc>
-    <lastmod>2026-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://alisnart.cn/solutions/ancient-town-lighting.html</loc>
@@ -295,12 +283,6 @@
     <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://alisnart.cn/en/solutions/outdoor-light-sculpture-durability.html</loc>
-    <lastmod>2026-10-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://alisnart.cn/podcast/ep3-light-art-longrun-2026.html</loc>
