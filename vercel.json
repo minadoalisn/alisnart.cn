@@ -15,16 +15,6 @@
       "permanent": true
     },
     {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/en/index.html",
-      "destination": "/en/",
-      "permanent": true
-    },
-    {
       "source": "/ai-faq.html",
       "destination": "/ai-answer-hub.html",
       "permanent": true
