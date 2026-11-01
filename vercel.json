@@ -21,7 +21,7 @@
     },
     {
       "source": "/en/index.html",
-      "destination": "/en",
+      "destination": "/en/",
       "permanent": true
     },
     {
