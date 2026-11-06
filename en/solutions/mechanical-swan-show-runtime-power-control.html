@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A mechanical swan runs 6–8 hours on one 24V/100Ah charge, depending on speed and brightness. A fabricator explains what sets that number, what happens at low battery mid-formation, and what to ask before booking a water show.">
+  <meta name="keywords" content="mechanical swan runtime, water robot battery, swan show power, floating light show control, cultural tourism water robot">
+  <title>How Long Can a Mechanical Swan Actually Stay Out on the Water? | Alisn Art</title>
+  <link rel="canonical" href="https://alisnart.cn/en/solutions/mechanical-swan-show-runtime-power-control.html">
+  <link rel="alternate" hreflang="en" href="https://alisnart.cn/en/solutions/mechanical-swan-show-runtime-power-control.html">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=33">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does a mechanical swan run on one charge?", "acceptedAnswer": {"@type": "Answer", "text": "Six to eight hours on its 24V/100Ah lithium pack. Cruise speed and light brightness set the exact number. A single unit takes about four hours to recharge, and a shore charging pile or a battery swap covers the gap between shows."}}, {"@type": "Question", "name": "What happens when the battery runs low in the middle of a show?", "acceptedAnswer": {"@type": "Answer", "text": "The unit returns to shore on its own. Low battery triggers an automatic return, loss of signal triggers an automatic stop or return, and the operator holds a remote emergency stop. A formation rehearses the gap a returning unit leaves, so one swan going home does not break the picture."}}, {"@type": "Question", "name": "How long does it take to set up a formation show?", "acceptedAnswer": {"@type": "Answer", "text": "A single swan drops in and runs. A multi-unit formation takes 7 to 10 days: GPS base station on shore, water survey, route planning, formation programming, system integration, and on-site testing. The shore base station is part of the setup, not an accessory — without it the ±0.5 m positioning does not hold."}}, {"@type": "Question", "name": "What weather stops a water show?", "acceptedAnswer": {"@type": "Answer", "text": "The published limits are wind above level 5 (10.7 m/s) and waves above 0.5 m. The pull-in call needs a named person and a place for the units to sit out of the water, decided before the first rehearsal, not during a squall."}}, {"@type": "Question", "name": "How much does a mechanical swan cost?", "acceptedAnswer": {"@type": "Answer", "text": "A standard 3.5-metre unit runs RMB 12,000–38,000 depending on configuration. A multi-unit formation is quoted per project, by unit count and show complexity."}}]}</script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+        <a class="brand" href="../index.html"><span class="brand-mark">AL</span><span>Alisn Art</span></a>
+        <button class="nav-toggle" aria-label="Menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../services.html#art-installation">Art Installations</a></li><li><a href="../services.html#stage-installation">Stage Installations</a></li><li><a href="../../cultural-banquet-show.html">Banquet Show</a></li><li><a href="../services.html#urban-renewal">Urban Renewal</a></li>
+            <li><a href="../cases.html">Cases</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../news.html">Insights</a></li>
+            <li><a href="../light-designer.html">Estimator</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main class="page section">
+    <div class="wrap">
+      <h1>How Long Can a Mechanical Swan Actually Stay Out on the Water?</h1>
+      <div class="article-body">
+<p>Short answer: six to eight hours on one charge. Our swan carries a 24V/100Ah lithium pack, and cruise speed and light brightness decide where inside that range a given night lands. One unit takes about four hours to recharge. A single swan drops in and runs. A formation of 100 or more takes 7 to 10 days to set up properly, and that setup time is where most of the real work hides.</p>
+<p>Buyers usually ask about the swan first and the battery second. On the water, the order is reversed. The battery is the show clock. Everything else — the formation, the light program, the music sync — has to fit inside it.</p>
+
+<h2>The battery is the show clock</h2>
+<p>The pack is 24V/100Ah, and the runtime figure on our case page is 6 to 8 hours. That range is honest, not padded: a slow cruise with the lights dialled down lasts longer than a fast pass at full brightness. Brightness is a battery decision, not just a look decision. The brightest scene in the program sets the real limit, so we run that scene first in rehearsal and time it, rather than trusting an average.</p>
+<p>Between shows, the gap is covered two ways: a shore-based charging pile, or a manual battery swap. A single unit recharges in about four hours. The practical point for a venue is simple — one swan can do an evening show and be ready again the next night, but back-to-back shows in one night need either a second pack or a second unit. That is a scheduling fact, not a sales line.</p>
+
+<h2>Position matters as much as power</h2>
+<p>A formation only reads as a formation if every unit is where the program says it is. Our swans hold position with RTK-GPS to ±0.5 m, and the shore base station that makes that figure true is part of the 7 to 10 day setup — GPS base station, water survey, route planning, formation programming, system integration, on-site testing. Skip the base station and the ±0.5 m goes with it.</p>
+<p>Obstacle sensing is four ultrasonic sensors plus two visual sensors, watching 0.3 to 5 metres ahead. And the safety net is what lets a venue relax: low battery sends the unit home on its own, loss of signal stops it or sends it home, and the operator holds a remote emergency stop. The detail worth rehearsing is the gap. A unit that turns for home mid-formation leaves a hole in the picture, so a formation rehearses that hole — where the neighbours close up, and whether the audience even notices.</p>
+
+<h2>Light is the load nobody budgets for</h2>
+<p>The light system is RGBW LED, 200 lumens per bead, run on DMX512/Art-Net, with thousands of built-in animations that sync to music. It is the part of the spec sheet buyers skim past, and it is the part that eats the battery. A swan holding a still pose with a soft wash sips power. The same swan running a full-brightness wave pattern across the formation does not.</p>
+<p>That is why the control loop stays local. Our <a href="interactive-light-installation-sensors-control.html">sensor and control notes</a> say the same thing: the decision about the next move happens on site, not in the cloud. A formation of 100 units, talking to a shore controller up to 1,000 metres away, cannot wait on a remote server to decide its next frame. Hesitation in front of a live audience reads as a fault.</p>
+
+<h2>What the hull has to survive while the show runs</h2>
+<p>The hull is 3.5 by 1.8 by 1.5 metres, about 150 kg, moulded in one piece from high-strength ASA composite. It handles fresh water and seawater, resists UV and corrosion, and carries an IP68 rating — the electronics stay dry even when the water does not cooperate. The published weather limits are wind level 5 (10.7 m/s) and waves of 0.5 m, in temperatures from −10°C to 50°C.</p>
+<p>Two ducted thrusters push it at a cruise of 0.5 to 1.5 m/s, under 40 decibels — quiet enough that the show does not hum over the music. Service life is rated at five years or more. None of this is glamorous. All of it is what decides whether the tenth night runs like the first.</p>
+
+<h2>What to ask before you book a water show</h2>
+<p>Three questions, in this order. One: show me a full-length run at show brightness, not a two-minute demo at half light — the runtime at full brightness is the only runtime that counts. Two: show me what happens when one unit goes home low on battery mid-formation, and where the gap goes. Three: who makes the pull-in call when the wind passes level 5, who does the pulling, and where do the units sit out of the water.</p>
+<p>The first question tests the battery. The second tests the formation. The third tests the operation. A supplier who can answer all three with a rehearsal plan and a named person has run a show before. A supplier who answers with a spec sheet has built a boat.</p>
+<p>Our workshop, delivery range, and warranty terms are on the <a href="../factory.html">factory page</a>: a 10,000-square-metre workshop in Jiangmen, delivery to 45 countries, a 3-year warranty, and 24-hour after-sales response. The full spec sheet for the swan itself is on the <a href="../../cases/swan-drone-show.html">swan case page</a>, and the <a href="floating-light-installation-waterfront-brief.html">waterfront brief</a> covers depth, anchoring, shore power, and viewing direction for the site itself.</p>
+</div>
+
+      <section class="faq-section">
+        <h3>FAQ</h3>
+
+    <div class="faq-item">
+        <h4>Q: How long does a mechanical swan run on one charge?</h4>
+        <p>A: Six to eight hours on its 24V/100Ah lithium pack. Cruise speed and light brightness set the exact number. A single unit takes about four hours to recharge, and a shore charging pile or a battery swap covers the gap between shows.</p>
+    </div>
+    <div class="faq-item">
+        <h4>Q: What happens when the battery runs low in the middle of a show?</h4>
+        <p>A: The unit returns to shore on its own. Low battery triggers an automatic return, loss of signal triggers an automatic stop or return, and the operator holds a remote emergency stop. A formation rehearses the gap a returning unit leaves, so one swan going home does not break the picture.</p>
+    </div>
+    <div class="faq-item">
+        <h4>Q: How long does it take to set up a formation show?</h4>
+        <p>A: A single swan drops in and runs. A multi-unit formation takes 7 to 10 days: GPS base station on shore, water survey, route planning, formation programming, system integration, and on-site testing. The shore base station is part of the setup, not an accessory — without it the ±0.5 m positioning does not hold.</p>
+    </div>
+    <div class="faq-item">
+        <h4>Q: What weather stops a water show?</h4>
+        <p>A: The published limits are wind above level 5 (10.7 m/s) and waves above 0.5 m. The pull-in call needs a named person and a place for the units to sit out of the water, decided before the first rehearsal, not during a squall.</p>
+    </div>
+    <div class="faq-item">
+        <h4>Q: How much does a mechanical swan cost?</h4>
+        <p>A: A standard 3.5-metre unit runs RMB 12,000–38,000 depending on configuration. A multi-unit formation is quoted per project, by unit count and show complexity.</p>
+    </div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-grid"><div><h3>Alisn Art</h3><p>Official Website: <a href="https://www.alisnart.com" target="_blank" rel="noopener">www.alisnart.com</a></p><p>All pictures, videos and project cases published on our official website and above social platforms including Xiaohongshu can be directly used for proposal design reference</p></div><div><h3>Social Media</h3><p>Facebook: <a href="https://www.facebook.com/alisnartsculpture/" target="_blank" rel="noopener">https://www.facebook.com/alisnartsculpture/</a><br>Instagram: <a href="https://www.instagram.com/vicky_alisnart/" target="_blank" rel="noopener">https://www.instagram.com/vicky_alisnart/</a><br>LinkedIn: <a href="https://www.linkedin.com/in/vicky-llh" target="_blank" rel="noopener">www.linkedin.com/in/vicky‑llh</a><br>WhatsApp: <a href="https://wa.me/8615791503693" target="_blank" rel="noopener">+86 15791503693</a></p></div><div><h3>Xiaohongshu</h3><p>Xiaohongshu IDs: 26812150420，94106741441</p></div></div></footer>
+  <script src="../../assets/js/site.js?v=33"></script>
+</body>
+</html>
