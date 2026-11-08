@@ -33,7 +33,6 @@ MOJIBAKE_MARKERS = [
 
 HIGH_VALUE_PATHS = [
     "",
-    "index.html",
     "services.html",
     "cases.html",
     "geo-promotion.html",

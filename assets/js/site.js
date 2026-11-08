@@ -114,7 +114,7 @@ if (estimator) {
     },
     town: {
       title: "古镇夜游",
-      image: "cases-images/ancient-town-lantern-route-hero.png",
+      image: "cases-images/ancient-town-lantern-route-hero.webp",
       modules: ["牌坊入口", "水巷灯影", "非遗主题装置", "小型光影演出"],
       advice: "控制光污染，把建筑、街巷、水面和地方文化串成慢游路线。",
       constraint: "古镇项目要避开文保立面破坏，灯具安装尽量可逆、可检修。"
@@ -161,7 +161,7 @@ if (estimator) {
       scenic: { title: "Scenic visitor route", image: "../cases-images/golden-leaf-tunnel.webp", modules: ["Arrival landmark", "Two or three photo nodes", "Low-glare route lighting", "Final show or commercial node"], advice: "Create a clear arrival and one memorable stopping point before adding projection, mist, or show content.", constraint: "Control glare, queues, fire access, and maintenance panels along the primary route." },
       lake: { title: "Waterfront show", image: "../cases-images/case-water-show.webp", modules: ["Water or shoreline focal point", "Shoreline fill lighting", "Show lighting and control", "Normal and festival modes"], advice: "Confirm water level, anchoring, shore power, wind, and viewing direction before selecting the show system.", constraint: "Verify electrical protection, anchoring, emergency access, and maintenance routes." },
       street: { title: "Commercial street", image: "../cases-images/crystal-gate-lanterns.webp", modules: ["Seasonal arrival gateway", "Replaceable theme elements", "Interactive storefront", "Pedestrian wayfinding nodes"], advice: "Prioritize reusable structures and replaceable content so seasonal updates do not require rebuilding everything.", constraint: "Maintain fire lanes, storefront visibility, canopy clearance, and event access." },
-      town: { title: "Old-town night route", image: "../cases-images/ancient-town-lantern-route-hero.png", modules: ["Arrival gateway", "Waterfront reflections", "Local-culture light nodes", "Small closing performance"], advice: "Use restrained lighting to connect architecture, streets, water, and local culture into a slow visitor route.", constraint: "Avoid irreversible work on protected façades; keep installation and maintenance access reversible where required." },
+      town: { title: "Old-town night route", image: "../cases-images/ancient-town-lantern-route-hero.webp", modules: ["Arrival gateway", "Waterfront reflections", "Local-culture light nodes", "Small closing performance"], advice: "Use restrained lighting to connect architecture, streets, water, and local culture into a slow visitor route.", constraint: "Avoid irreversible work on protected façades; keep installation and maintenance access reversible where required." },
       hotel: { title: "Hotel arrival", image: "../cases-images/tropical-resort-archway.webp", modules: ["Arrival light corridor", "Brand landmark", "Vehicle guidance", "Seasonal change system"], advice: "Focus on recognition, nighttime arrival, and one social-photo moment before considering complex show content.", constraint: "Coordinate vehicle sightlines, porte-cochère height, guest circulation, weather, and brand color temperature." }
     };
     budgets = {

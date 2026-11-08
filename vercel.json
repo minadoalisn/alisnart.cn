@@ -15,6 +15,11 @@
       "permanent": true
     },
     {
+      "source": "/copywriting.html",
+      "destination": "/news.html",
+      "permanent": true
+    },
+    {
       "source": "/ai-faq.html",
       "destination": "/ai-answer-hub.html",
       "permanent": true
