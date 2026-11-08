@@ -7,9 +7,9 @@ const {TextDecoder} = require('node:util');
 const rootFiles = new Set([
   'about.html', 'ai-answer-hub.html', 'ai-faq.html', 'ai-tutorial.html',
   'art-installations.html', 'baidu_verify_codeva-im4D9lRCYA.html', 'cases.html',
-  'cultural-banquet-show.html', 'geo-promotion.html', 'geo.html',
+  'cultural-banquet-show.html', 'geo-promotion.html',
   'index.html', 'light-designer.html', 'news-detail.html', 'news.html', 'podcast.html',
-  'seo.html', 'services.html', 'stage-installations.html', 'urban-renewal.html',
+  'services.html', 'stage-installations.html', 'urban-renewal.html',
   '7b3e99cf8369883da4fbdc05a82a7051.txt', 'baidu_verify_codeva-im4D9lRCYA',
   'ai-search-ready.txt', 'llms.txt', 'robots.txt', 'sitemap.xml',
   'geo-feed.json', 'schema-markup.json', 'hero-bg.webp'

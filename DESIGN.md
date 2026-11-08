@@ -132,6 +132,11 @@ Mobile:
 - Language switch must be readable in both active and inactive states.
 - Do not ship a nav button that only changes icon without revealing links.
 
+Shared layout:
+
+- All public Chinese pages (root, `solutions/`, `cases/`, `podcast/`) use one header and footer. After adding or generating a zh page, run `python3 scripts/unify_layout.py`; do not hand-write a page-specific header.
+- Mobile header is two rows: logo + EN, then a horizontally scrollable rail with every nav link. There is no hamburger menu.
+
 ### Buttons
 
 Primary CTA:

@@ -15,6 +15,16 @@
       "permanent": true
     },
     {
+      "source": "/geo.html",
+      "destination": "/geo-promotion.html",
+      "permanent": true
+    },
+    {
+      "source": "/seo.html",
+      "destination": "/geo-promotion.html",
+      "permanent": true
+    },
+    {
       "source": "/copywriting.html",
       "destination": "/news.html",
       "permanent": true
