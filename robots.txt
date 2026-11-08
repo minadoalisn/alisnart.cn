@@ -1,31 +1,50 @@
 # robots.txt for 广东艾里森光电技术有限公司
 # https://alisnart.cn
-# Last updated: 2026-07-09
+# Last updated: 2026-11-08
+# 所有公开页面允许抓取。站点地图与 AI 可读入口见文末。
 
-# Priority GEO keywords (for audit / tooling)
-# 文旅灯光装置
-# 灯光艺术装置
-# 网红打卡装置
-# 爆款灯光艺术装置
-# 灯光网红项目
-
+# 通用
 User-agent: *
 Allow: /
-Crawl-delay: 1
 
-User-agent: Googlebot
-Allow: /
-
+# 百度（文心一言、百度 AI 搜索）
 User-agent: Baiduspider
 Allow: /
 
-User-agent: Bingbot
+User-agent: Baiduspider-render
+Allow: /
+
+# 字节跳动 / 头条搜索（豆包）
+User-agent: Bytespider
+Allow: /
+
+# 神马 / 夸克（通义千问、夸克 AI 搜索）
+User-agent: Yisouspider
+Allow: /
+
+# 搜狗 / 微信搜一搜（腾讯元宝）
+User-agent: Sogou web spider
 Allow: /
 
 User-agent: Sogou spider
 Allow: /
 
+# 360（纳米 AI 搜索）
 User-agent: 360Spider
+Allow: /
+
+# 华为花瓣搜索（小艺）
+User-agent: PetalBot
+Allow: /
+
+# 国际搜索与 AI
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: GPTBot
@@ -35,9 +54,6 @@ User-agent: ChatGPT-User
 Allow: /
 
 User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: Perplexity-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -52,10 +68,10 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: Perplexity-User
 Allow: /
 
-User-agent: Applebot
+User-agent: Google-Extended
 Allow: /
 
 User-agent: CCBot
@@ -68,7 +84,6 @@ Sitemap: https://alisnart.cn/sitemap.xml
 
 # AI-readable entry points
 # https://alisnart.cn/llms.txt
-# https://alisnart.cn/ai-answer-hub.html
 # https://alisnart.cn/ai-search-ready.txt
 # https://alisnart.cn/geo-feed.json
-# https://alisnart.cn/geo-promotion.html
+# https://alisnart.cn/ai-answer-hub.html

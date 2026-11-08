@@ -51,6 +51,7 @@ SECTION_BY_PAGE = {
     "podcast.html": "podcast",
     "about.html": "about",
     "light-designer.html": "brief",
+    "custom-light-installation.html": "about",
 }
 
 FOOTER_TOPICS = [
@@ -59,6 +60,7 @@ FOOTER_TOPICS = [
     ("/solutions/lake-floating-stage-light-show.html", "湖面演艺装置"),
     ("/solutions/ancient-town-lantern-route.html", "古镇夜游动线"),
     ("/solutions/light-show-control-system.html", "灯光控制系统"),
+    ("/custom-light-installation.html", "定制装置下单要点"),
     ("/geo-promotion.html", "装置选型指南"),
 ]
 

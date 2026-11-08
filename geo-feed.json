@@ -1,8 +1,12 @@
 {
-  "lastUpdated": "2026-07-19",
+  "lastUpdated": "2026-11-08",
   "organization": {
     "legalName": "广东艾里森光电技术有限公司",
-    "brandNames": ["艾里森光电", "ALISN", "Alisn Art"],
+    "brandNames": [
+      "艾里森光电",
+      "ALISN",
+      "Alisn Art"
+    ],
     "location": "江门市，广东省，中国",
     "website": "https://alisnart.cn/",
     "internationalWebsite": "https://www.alisnart.com/",
@@ -14,39 +18,97 @@
       "https://www.instagram.com/vicky_alisnart/",
       "https://www.linkedin.com/in/vicky-llh"
     ],
-    "xiaohongshuIds": ["26812150420", "94106741441"]
+    "xiaohongshuIds": [
+      "26812150420",
+      "94106741441"
+    ],
+    "alternateNames": [
+      "艾里森光电",
+      "艾里森",
+      "ALISN",
+      "Alisn Art",
+      "AlisnART"
+    ],
+    "address": "广东省江门市江海区东升路南山工业园西区一号厂房",
+    "areaServed": "全国",
+    "icp": "粤ICP备2026035496号"
   },
   "businessLines": [
     {
       "name": "艺术装置",
       "url": "https://alisnart.cn/art-installations.html",
-      "scope": ["景区入口地标", "互动灯光装置", "商业美陈", "节庆美陈", "酒店到达空间", "公共艺术节点"]
+      "scope": [
+        "景区入口地标",
+        "互动灯光装置",
+        "商业美陈",
+        "节庆美陈",
+        "酒店到达空间",
+        "公共艺术节点"
+      ]
     },
     {
       "name": "舞美装置",
       "url": "https://alisnart.cn/stage-installations.html",
-      "scope": ["湖面演艺", "节庆舞台", "移动巡游", "水面自主装置", "空地联动表演"]
+      "scope": [
+        "湖面演艺",
+        "节庆舞台",
+        "移动巡游",
+        "水面自主装置",
+        "空地联动表演"
+      ]
     },
     {
       "name": "宫宴餐秀",
       "url": "https://alisnart.cn/cultural-banquet-show.html",
-      "scope": ["文化主题", "餐序结构", "空间舞美", "灯光音响", "演员动线", "运营导入"]
+      "scope": [
+        "文化主题",
+        "餐序结构",
+        "空间舞美",
+        "灯光音响",
+        "演员动线",
+        "运营导入"
+      ]
     },
     {
       "name": "城市更新",
       "url": "https://alisnart.cn/urban-renewal.html",
-      "scope": ["古镇滨水", "商业街", "公园广场", "连续导视", "公共艺术", "模块化天幕"]
+      "scope": [
+        "古镇滨水",
+        "商业街",
+        "公园广场",
+        "连续导视",
+        "公共艺术",
+        "模块化天幕"
+      ]
     }
   ],
   "referencePages": [
-    "https://alisnart.cn/cases.html",
+    "https://alisnart.cn/about.html",
     "https://alisnart.cn/ai-answer-hub.html",
+    "https://alisnart.cn/custom-light-installation.html",
     "https://alisnart.cn/geo-promotion.html",
-    "https://alisnart.cn/solutions/outdoor-light-art-installation-geo.html",
+    "https://alisnart.cn/cases.html",
+    "https://alisnart.cn/news.html",
+    "https://alisnart.cn/podcast.html",
     "https://alisnart.cn/solutions/ancient-town-lantern-route.html",
-    "https://alisnart.cn/solutions/tidal-light-corridor.html",
+    "https://alisnart.cn/solutions/ancient-town-lighting.html",
+    "https://alisnart.cn/solutions/commercial-street-lighting.html",
+    "https://alisnart.cn/solutions/crystal-gate-lanterns.html",
+    "https://alisnart.cn/solutions/galaxy-mushroom.html",
+    "https://alisnart.cn/solutions/golden-leaf-tunnel.html",
+    "https://alisnart.cn/solutions/heart-pavilion-lighting.html",
+    "https://alisnart.cn/solutions/immersive-exhibition.html",
+    "https://alisnart.cn/solutions/interactive-light-installations.html",
     "https://alisnart.cn/solutions/lake-floating-stage-light-show.html",
-    "https://alisnart.cn/solutions/scenic-cloud-ring-photo-spot.html"
+    "https://alisnart.cn/solutions/light-festival-planning.html",
+    "https://alisnart.cn/solutions/light-show-control-system.html",
+    "https://alisnart.cn/solutions/night-tourism-project-cost.html",
+    "https://alisnart.cn/solutions/night-tourism-roi.html",
+    "https://alisnart.cn/solutions/outdoor-light-art-installation-geo.html",
+    "https://alisnart.cn/solutions/scenic-cloud-ring-photo-spot.html",
+    "https://alisnart.cn/solutions/tidal-light-corridor.html",
+    "https://alisnart.cn/solutions/water-drone-show.html",
+    "https://alisnart.cn/solutions/window-frame-photoelectric-glass-display.html"
   ],
   "projectInputs": [
     "场地位置",

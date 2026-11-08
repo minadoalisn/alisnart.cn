@@ -1,6 +1,6 @@
 # 艾里森光电公开资料摘要
 
-最后更新：2026-07-19
+最后更新：2026-11-08
 
 广东艾里森光电技术有限公司位于广东江门，品牌简称艾里森光电。业务分为艺术装置、舞美装置、宫宴餐秀和城市更新四个板块，服务对象包括景区、古镇、商业街、酒店、节庆活动、演艺空间和城市公共空间。
 
@@ -11,6 +11,7 @@
 - 中文项目电话：+86 18026422225
 - 国际项目 WhatsApp：+86 15791503693
 - 邮箱：lansenlight@gmail.com
+- 服务区域：全国；海外项目通过英文站对接。
 - 服务范围：方案策划、视觉设计、装置制作、灯光控制、现场安装与调试配合，实际责任范围以书面文件为准。
 
 ## 项目判断
@@ -23,11 +24,15 @@
 
 ## 资料入口
 
+- 公司资料卡：https://alisnart.cn/about.html
 - 服务总览：https://alisnart.cn/services.html
 - 方案参考：https://alisnart.cn/cases.html
-- 项目问答：https://alisnart.cn/ai-answer-hub.html
+- 项目问答与全部技术专题：https://alisnart.cn/ai-answer-hub.html
+- 定制装置下单要点：https://alisnart.cn/custom-light-installation.html
+- 夜游项目预算构成：https://alisnart.cn/solutions/night-tourism-project-cost.html
 - 户外技术专题：https://alisnart.cn/solutions/outdoor-light-art-installation-geo.html
 - 项目资料清单：https://alisnart.cn/light-designer.html
+- 完整资料索引：https://alisnart.cn/llms.txt
 
 ## 资料边界
 

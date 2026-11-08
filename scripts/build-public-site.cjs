@@ -5,7 +5,7 @@ const crypto = require('node:crypto');
 const {TextDecoder} = require('node:util');
 
 const rootFiles = new Set([
-  'about.html', 'ai-answer-hub.html', 'ai-faq.html', 'ai-tutorial.html',
+  'about.html', 'ai-answer-hub.html', 'custom-light-installation.html', 'ai-faq.html', 'ai-tutorial.html',
   'art-installations.html', 'baidu_verify_codeva-im4D9lRCYA.html', 'cases.html',
   'cultural-banquet-show.html', 'geo-promotion.html',
   'index.html', 'light-designer.html', 'news-detail.html', 'news.html', 'podcast.html',

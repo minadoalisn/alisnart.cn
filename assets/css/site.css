@@ -2655,3 +2655,9 @@ body:not(.business-detail):not(.banquet-site) :is(main .section:not(.alt, .cta-b
 body:not(.business-detail):not(.banquet-site) .section.alt :is(.tag, .eyebrow),
 body:not(.business-detail):not(.banquet-site) :is(main .section:not(.alt, .cta-band, .hero, .premium-hero, .banquet-feature-section, .case-category), main.page.section) .section.alt :is(.tag, .eyebrow) { color: var(--brand-foshou-yellow); }
 .statement-title span { color: inherit !important; }
+.card-meta { margin-top: 18px; font-size: 13px; opacity: .7; }
+.podcast-archive { columns: 2; column-gap: 48px; padding-left: 20px; line-height: 2; }
+.podcast-archive .archive-date { color: var(--ink-muted); font-size: 13px; opacity: .8; }
+@media (max-width: 720px) { .podcast-archive { columns: 1; } }
+.fact-table { min-width: 0; }
+.fact-table tbody th { width: 9em; }
