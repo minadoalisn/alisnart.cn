@@ -1,6 +1,6 @@
 # 艾里森光电公开资料索引
 
-最后更新：2026-07-19
+最后更新：2026-11-08
 
 ## 组织信息
 
@@ -24,29 +24,76 @@
 
 ## 主要页面
 
-- 四大业务：https://alisnart.cn/services.html
+- 首页：https://alisnart.cn/
+- 四大业务与交付方式：https://alisnart.cn/services.html
 - 艺术装置：https://alisnart.cn/art-installations.html
 - 舞美装置：https://alisnart.cn/stage-installations.html
 - 宫宴餐秀：https://alisnart.cn/cultural-banquet-show.html
 - 城市更新：https://alisnart.cn/urban-renewal.html
 - 方案参考：https://alisnart.cn/cases.html
-- 项目问答：https://alisnart.cn/ai-answer-hub.html
-- 全国服务：https://alisnart.cn/geo.html
-- 项目资料：https://alisnart.cn/light-designer.html
-- 英文首页：https://alisnart.cn/en/
+- 项目问答与全部技术专题索引：https://alisnart.cn/ai-answer-hub.html
+- 装置选型指南与服务区域：https://alisnart.cn/geo-promotion.html
+- 项目资料整理工具：https://alisnart.cn/light-designer.html
+- 项目洞察：https://alisnart.cn/news.html
+- 文旅新声播客：https://alisnart.cn/podcast.html
+- 关于艾里森光电：https://alisnart.cn/about.html
+- 英文站：https://alisnart.cn/en/
 
-## 技术专题
+## 技术专题（每篇含关键参数、取舍、常见问题和前期资料清单）
 
-- 户外长期灯光艺术装置：https://alisnart.cn/solutions/outdoor-light-art-installation-geo.html
-- 古镇夜游动线：https://alisnart.cn/solutions/ancient-town-lantern-route.html
-- 商业街互动连廊：https://alisnart.cn/solutions/tidal-light-corridor.html
-- 湖面演艺装置：https://alisnart.cn/solutions/lake-floating-stage-light-show.html
-- 景区入口打卡装置：https://alisnart.cn/solutions/scenic-cloud-ring-photo-spot.html
-- 水天一体无人装置：https://alisnart.cn/cases/swan-drone-show.html
+- 古镇灯语游线：https://alisnart.cn/solutions/ancient-town-lantern-route.html
+- 古镇夜游亮化，先保护建筑，再谈光影效果：https://alisnart.cn/solutions/ancient-town-lighting.html
+- 商业街灯光美陈，要让人停下来，也要让人走得通：https://alisnart.cn/solutions/commercial-street-lighting.html
+- 节庆地标拱门：尺寸跟着场地走，结构跟着风走：https://alisnart.cn/solutions/crystal-gate-lanterns.html
+- 星河蘑菇：异形地标的难点在曲面结构和长期维护：https://alisnart.cn/solutions/galaxy-mushroom.html
+- 灯光隧道：长度、间距和供电回路一起定：https://alisnart.cn/solutions/golden-leaf-tunnel.html
+- 爱心凉亭：让打卡点也能坐下来、留下来：https://alisnart.cn/solutions/heart-pavilion-lighting.html
+- 沉浸式光影展：场地条件决定上限，内容更新决定寿命：https://alisnart.cn/solutions/immersive-exhibition.html
+- 互动灯光装置：感应越简单，长期越可靠：https://alisnart.cn/solutions/interactive-light-installations.html
+- 湖心浮岛光舞秀台：https://alisnart.cn/solutions/lake-floating-stage-light-show.html
+- 城市灯光节：好看只是开始，人流和安全才是主线：https://alisnart.cn/solutions/light-festival-planning.html
+- 景区灯光控制系统：先分区和模式，再选平台：https://alisnart.cn/solutions/light-show-control-system.html
+- 景区夜游项目预算，应该按节点拆，而不是按灯具数量算：https://alisnart.cn/solutions/night-tourism-project-cost.html
+- 夜游项目多久能回本？先把三个数算清楚：https://alisnart.cn/solutions/night-tourism-roi.html
+- 户外长期灯光艺术装置，不能只看IP65：https://alisnart.cn/solutions/outdoor-light-art-installation-geo.html
+- 云镜花环光影门：https://alisnart.cn/solutions/scenic-cloud-ring-photo-spot.html
+- 潮汐光巷互动连廊：https://alisnart.cn/solutions/tidal-light-corridor.html
+- 水上舞台与无人机演出怎么采购？：https://alisnart.cn/solutions/water-drone-show.html
+- 橱窗相框光电玻璃显示屏：让门店橱窗白天通透，夜晚会说话：https://alisnart.cn/solutions/window-frame-photoelectric-glass-display.html
+
+## 方案参考（概念或产品方向，未标注为已完成项目）
+
+- 生物形态LED灯光天篷：https://alisnart.cn/cases/biomorphic-led-canopy.html
+- 天环广场：https://alisnart.cn/cases/celestial-ring-plaza.html
+- 国潮几何光影门：https://alisnart.cn/cases/guochao-geometric-gate.html
+- 汉风月影·孔雀秋千台：https://alisnart.cn/cases/han-moon-peacock-swing.html
+- 华灯树广场：https://alisnart.cn/cases/lantern-tree-plaza.html
+- 月下仙境：https://alisnart.cn/cases/moonlit-wonderland.html
+- 水上无人机自动巡游天鹅：https://alisnart.cn/cases/swan-drone-show.html
+- 热带度假村灯光拱门入口：https://alisnart.cn/cases/tropical-resort-archway.html
+
+## 文旅新声播客（行业观察）
+
+- 第1期 从看风景到走进故事：2026文旅沉浸式浪潮：https://alisnart.cn/podcast/ep1-immersive-tourism-2026.html
+- 第3期 光影不退场：数字光影如何变成文旅空间的常态化现金流：https://alisnart.cn/podcast/ep3-light-art-longrun-2026.html
+- 第4期 小城当舞台：县域文旅的沉浸式突围：https://alisnart.cn/podcast/ep4-town-stage-2026.html
+- 第5期 老厂房的新生：工业遗产如何变成文旅空间：https://alisnart.cn/podcast/ep5-industrial-heritage-2026.html
+- 第8期 让消失的东西活过来：数字装置与遗产新生：https://alisnart.cn/podcast/ep8-heritage-digital-2026.html
+- 第9期 灯光走进林子：城市公园夜游的新打法：https://alisnart.cn/podcast/ep9-forest-light-2026.html
+- 第10期 夜游要有味道：在地文化才是破局的钥匙：https://alisnart.cn/podcast/ep10-local-flavor-night-2026.html
+- 第11期 住进场景：沉浸式消费新场景成了主产品：https://alisnart.cn/podcast/ep11-live-in-scene-2026.html
+- 第12期 走进村子：乡村文旅正在卖一段生活：https://alisnart.cn/podcast/ep12-village-life-2026.html
+- 第13期 从展会首发到日常落地：文化科技装置怎么走出展厅：https://alisnart.cn/podcast/ep13-expo-to-daily-2026.html
+- 第14期 当机器自己动起来：会呼吸的装置正在改写文旅体验：https://alisnart.cn/podcast/ep14-living-machines-2026.html
+- 第15期 不建新的，改旧的：存量文旅的第二次生命：https://alisnart.cn/podcast/ep15-stock-renewal-2026.html
+- 第16期 天空成了新舞台：当夜空开始月更：https://alisnart.cn/podcast/ep16-sky-stage-2026.html
+- 第17期 外国人来了：中国旅行正在变成文旅的新增长极：https://alisnart.cn/podcast/ep17-inbound-china-travel-2026.html
+- 第18期 导游换人了：AI讲解员正在景区上岗：https://alisnart.cn/podcast/ep18-ai-tour-guide-2026.html
+- 第19期 一南一北，冬天文旅换场：广州点灯，哈尔滨造冰：https://alisnart.cn/podcast/ep19-winter-light-ice-2026.html
 
 ## 项目前期资料
 
-有效的初步评估通常需要：场地位置、现状照片或视频、平面图与尺寸、游客动线、供电条件、预算范围、目标开放日期、使用周期和运营方式。效果图中的尺寸、材料、结构、设备和价格不能替代现场复核与书面技术文件。
+有效的初步评估通常需要：场地位置、现状照片或视频、平面图与尺寸、游客动线、供电条件、预算区间、目标开放日期、使用周期和运营方式。效果图中的尺寸、材料、结构、设备和价格不能替代现场复核与书面技术文件。
 
 ## 内容说明
 

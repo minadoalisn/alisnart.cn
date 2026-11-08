@@ -2429,3 +2429,26 @@ body > .nav .back-link { color: rgba(255,255,255,.66); font-size: 14px; }
 @media (max-width: 900px) {
   main.page.section { padding-top: 140px; }
 }
+
+/* Solution answer pages: parameter table and brief checklist. */
+.spec-table-wrap { overflow-x: auto; border: 1px solid rgba(255,255,255,.1); border-radius: 8px; }
+.spec-table { width: 100%; min-width: 640px; border-collapse: collapse; color: #ddd; font-size: 15px; line-height: 1.65; }
+.spec-table th, .spec-table td { padding: 14px 18px; border-bottom: 1px solid rgba(255,255,255,.08); text-align: left; vertical-align: top; }
+.spec-table thead th { color: var(--brand-foshou-yellow); font-size: 13px; font-weight: 700; background: #0d0d0d; }
+.spec-table tbody th { width: 16%; color: #fff; font-weight: 640; white-space: nowrap; }
+.spec-table td:last-child { color: var(--text-muted); }
+.spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: 0; }
+.brief-list { margin: 0; padding-left: 20px; columns: 2; column-gap: 48px; color: var(--text-muted); line-height: 1.9; }
+@media (max-width: 720px) { .brief-list { columns: 1; } }
+@media (max-width: 720px) {
+  .spec-table { min-width: 0; }
+  .spec-table thead { display: none; }
+  .spec-table, .spec-table tbody, .spec-table tr, .spec-table th, .spec-table td { display: block; width: 100%; }
+  .spec-table tr { padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .spec-table tbody th, .spec-table td { padding: 2px 0; border: 0; white-space: normal; }
+  .spec-table tbody th { margin-bottom: 4px; color: var(--brand-foshou-yellow); }
+  .spec-table td:last-child { margin-top: 6px; font-size: 14px; }
+}
+@media (max-width: 720px) { .spec-table tbody th { width: 100%; } }
+.section-copy a { color: var(--brand-foshou-yellow); text-decoration: underline; text-underline-offset: 3px; }
+.related-topics { padding-top: 24px; }
