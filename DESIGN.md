@@ -21,7 +21,7 @@ The emotional hierarchy is:
 
 Key characteristics:
 
-- Dark night-gallery canvas.
+- Dusk (blue-hour) canvas with paper reading sections; see "2026-11 Dusk Direction".
 - Four brand colors from the Alisnart vehicle-wrap palette used deliberately, not as a decorative rainbow.
 - Photography and generated realistic installation images carry the visual impact.
 - UI surfaces are restrained, with 8px or smaller radius.
@@ -41,6 +41,20 @@ Reading this as: a B2B light-art and night-tourism company site for project owne
 - Use the system font stack; do not download or imitate proprietary Apple fonts.
 - Preserve canonical URLs, GEO answers, contact channels, and language variants during the redesign.
 - Remove unsupported project counts, coverage counts, certifications, warranties, and exact performance claims.
+
+### 2026-11 Dusk Direction (current)
+
+The all-black night theme was replaced because it read as somber. The site now uses the blue hour, the moment the lights come on:
+
+- **暮蓝 Dusk** `#123F42` and **深暮 Deep dusk** `#0B2A2C` replace black for header, hero, alternate sections and footer.
+- **辰雾白 Paper** `#EDEEE8` is the default reading surface for content sections, with **墨 Ink** `#0A1818` text and white cards.
+- **佛手黄** stays the lamplight colour: primary CTA, active nav, labels on dusk. Do not use it as text on paper.
+- **朱砂红** is the full-width CTA band and the banquet feature (deep cinnabar `#4A1A13` / `#5C2118`).
+- Business cards show a solid brand-colour panel under the photo (art blue, stage yellow, banquet red, renewal mist).
+- Hero: full-bleed installation photo, headline left over a dusk gradient. One load moment only: the photo brightens from dim and cool to full warmth ("lights on"). Respect `prefers-reduced-motion`.
+- Other motion only answers user actions: cross-page view transitions, header tightening on scroll, button press, image zoom on card hover.
+- No English all-caps eyebrows on Chinese pages, no single-phrase colour accents in headlines, no decorative 01-04 numbering unless the content is a sequence.
+- The final CSS layer "2026-11 Dusk system" in `assets/css/site.css` owns these rules; business-detail and banquet pages keep their own sector themes.
 
 ## 2. Color Palette & Roles
 

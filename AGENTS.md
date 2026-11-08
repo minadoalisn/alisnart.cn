@@ -4,7 +4,7 @@ Before changing UI/UX, read `DESIGN.md` and `design-references/component-checkli
 
 Project priorities:
 
-- Keep the site dark, cinematic, practical, and buyer-facing.
+- Keep the site cinematic, practical, and buyer-facing, using the dusk palette in `DESIGN.md` (dusk teal base, paper reading sections, lamplight yellow, cinnabar CTA), not all-black.
 - Remove AI taste: no public prompt text, no test posts promoted as public content, no vague generic copy, no decorative blobs, no fake dashboard sections.
 - Use real or realistic light-art installation images with visible structure, scale, ground contact, and maintenance plausibility.
 - Mobile navigation must stay visible and selectable; do not rely on fragile hidden hamburger behavior.

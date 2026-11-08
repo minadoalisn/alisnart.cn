@@ -361,3 +361,18 @@ if (document.readyState === "loading") {
 } else {
   initPremiumSite();
 }
+
+// Header tightens once the page scrolls (style lives in site.css: .is-scrolled).
+(function initHeaderScroll() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  let ticking = false;
+  const update = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  update();
+})();
