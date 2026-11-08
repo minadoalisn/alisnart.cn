@@ -1935,7 +1935,7 @@ body > .nav .back-link { color: rgba(255,255,255,.66); font-size: 14px; }
 .business-card .proof-list li::before { background: var(--service-accent); }
 .business-card h3 { letter-spacing: 0; }
 
-.banquet-feature-section { background: #071414; }
+.banquet-feature-section { background: #071414; color: var(--brand-mist-white); }
 .banquet-feature {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(340px, .75fr);
@@ -1948,7 +1948,8 @@ body > .nav .back-link { color: rgba(255,255,255,.66); font-size: 14px; }
 .banquet-feature figure { min-height: 660px; }
 .banquet-feature figure img { width: 100%; height: 100%; object-fit: cover; }
 .banquet-feature-copy { padding: 64px 54px; align-self: center; }
-.banquet-feature-copy h2 { margin: 0 0 22px; font: 600 clamp(34px,4vw,56px)/1.28 "STSong","SimSun",serif; letter-spacing: 0; }
+.banquet-feature-copy h2 { margin: 0 0 22px; font: 600 clamp(34px,4vw,56px)/1.28 "STSong","SimSun",serif; letter-spacing: 0; color: var(--brand-mist-white); }
+.banquet-feature-copy .eyebrow { color: var(--brand-foshou-yellow); }
 .banquet-feature-copy > p { color: rgba(237,238,232,.7); margin-bottom: 24px; }
 .banquet-feature-copy .proof-list { margin-bottom: 30px; }
 .banquet-button { background: var(--brand-cinnabar-red); color: #fff; }
