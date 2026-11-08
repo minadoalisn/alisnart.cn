@@ -1,60 +1,25 @@
 function initSiteNav() {
-  const toggle = document.querySelector(".nav-toggle");
-  const links = document.querySelector(".nav-links");
+  // Navigation is an always-visible rail (no hamburger). Only two jobs here:
+  // expose the language link on mobile, and keep the active item in view.
   const nav = document.querySelector(".nav");
-  const state = document.querySelector(".nav-menu-state");
-
-  if (!toggle || !links || toggle.dataset.bound === "true") return;
-  toggle.dataset.bound = "true";
+  const links = document.querySelector(".nav-links");
+  if (!nav || !links || nav.dataset.bound === "true") return;
+  nav.dataset.bound = "true";
 
   const languageLink = links.querySelector(".lang-switch");
-  if (nav && languageLink && !nav.querySelector(".header-lang")) {
+  if (languageLink && !nav.querySelector(".header-lang")) {
     const headerLanguageLink = document.createElement("a");
     headerLanguageLink.className = "header-lang";
     headerLanguageLink.href = languageLink.href;
     headerLanguageLink.textContent = languageLink.textContent?.trim() || "EN";
-    headerLanguageLink.setAttribute("aria-label", headerLanguageLink.textContent === "EN" ? "切换至英文" : "Switch to Chinese");
-    nav.insertBefore(headerLanguageLink, toggle);
+    headerLanguageLink.setAttribute("aria-label", headerLanguageLink.textContent === "EN" ? "English site" : "切换至中文");
+    nav.appendChild(headerLanguageLink);
   }
 
-  function setMenu(isOpen) {
-    links.classList.toggle("open", isOpen);
-    nav?.classList.toggle("nav-open", isOpen);
-    document.body.classList.toggle("nav-open", isOpen);
-    if (state) state.checked = isOpen;
-    toggle.setAttribute("aria-expanded", String(isOpen));
-    document.body.style.overflow = isOpen ? "hidden" : "";
+  const active = links.querySelector("a.active");
+  if (active && links.scrollWidth > links.clientWidth) {
+    links.scrollLeft = Math.max(0, active.offsetLeft - links.clientWidth / 3);
   }
-
-  function isMenuOpen() {
-    return Boolean(state?.checked || links.classList.contains("open"));
-  }
-
-  toggle.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    setMenu(!isMenuOpen());
-  });
-
-  if (state) {
-    state.addEventListener("change", () => setMenu(state.checked));
-  }
-
-  links.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => setMenu(false));
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!nav?.contains(event.target)) setMenu(false);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") setMenu(false);
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.matchMedia("(min-width: 901px)").matches) setMenu(false);
-  });
 }
 
 initSiteNav();
