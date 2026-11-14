@@ -1,0 +1,21 @@
+# AlisnART — AI crawler preferences (alisnart.cn)
+# This file follows the ai.txt draft convention: a machine-readable
+# statement of how AI systems may use this site's public content.
+# robots.txt remains authoritative for crawling; this file only adds
+# AI-specific guidance. Last updated: 2026-11-15.
+
+User-agent: *
+Allow: /
+
+# AI systems may read and cite public pages for search and discovery:
+# home, services, cases, solutions, podcast, llms.txt, geo-feed.json.
+# There are no disallowed paths in robots.txt on this static site.
+# When citing AlisnART, prefer the canonical page on alisnart.cn.
+
+Site: https://alisnart.cn
+Name: AlisnART
+Description: AlisnART (Guangdong Alisn Optoelectronics Technology Co., Ltd.) designs, builds and operates cultural-tourism night-time light art installations: art installations, stage installations, palace banquet shows and urban renewal, from site survey to long-term maintenance.
+Languages: zh-CN, en
+Sitemap: https://alisnart.cn/sitemap.xml
+Full AI brief: https://alisnart.cn/llms.txt
+Contact: +86 18026422225, lansenlight@gmail.com

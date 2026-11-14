@@ -19,6 +19,9 @@ const publicData = new Set(['data/geo-keywords.json', 'data/news.json', 'data/po
 // Existing episode 8 decodes these public media files in its browser player.
 // Do not allow arbitrary .txt files (probes and video chunks remain excluded).
 const publicMedia = new Set(['podcast/ep8-cover.txt', 'podcast/ep8-audio.txt']);
+// AI discovery endpoints (geo-optimizer ai_discovery): allowlisted by exact
+// path, same as publicData. Do not allow arbitrary .txt/.json files.
+const publicAi = new Set(['.well-known/ai.txt', 'ai/summary.json', 'ai/faq.json', 'ai/service.json']);
 const extensions = new Set(['.html', '.css', '.js', '.svg', '.webp', '.png', '.jpg', '.jpeg', '.gif', '.ico', '.mp3', '.mp4', '.vtt', '.pdf']);
 
 function build(source) {
@@ -37,12 +40,12 @@ function build(source) {
       }
     } else if (info.isFile()) {
       const name = path.posix.basename(relative);
-      if (relative.includes('/') && !publicData.has(relative) && !publicMedia.has(relative) && (!publicDirs.has(relative.split('/')[0]) || !extensions.has(path.extname(name).toLowerCase()))) return;
+      if (relative.includes('/') && !publicData.has(relative) && !publicMedia.has(relative) && !publicAi.has(relative) && (!publicDirs.has(relative.split('/')[0]) || !extensions.has(path.extname(name).toLowerCase()))) return;
       if (name === 'admin.html' || name.endsWith('-final.html')) return;
       files.set(relative, fs.readFileSync(absolute));
     }
   }
-  for (const name of [...rootFiles, ...publicData, ...publicDirs].sort()) {
+  for (const name of [...rootFiles, ...publicData, ...publicAi, ...publicDirs].sort()) {
     if (fs.existsSync(path.join(root, name))) visit(name);
   }
   // Exact existing redirects are routes, not documents. Keep legacy encoded
