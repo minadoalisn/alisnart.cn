@@ -12,6 +12,7 @@ const rootFiles = new Set([
   'seo.html', 'services.html', 'stage-installations.html', 'urban-renewal.html',
   '7b3e99cf8369883da4fbdc05a82a7051.txt', 'baidu_verify_codeva-im4D9lRCYA',
   'ai-search-ready.txt', 'llms.txt', 'llms-full.txt', 'robots.txt', 'sitemap.xml',
+  'feed.xml',
   'geo-feed.json', 'schema-markup.json', 'hero-bg.webp'
 ]);
 const publicDirs = new Set(['assets', 'business-images', 'cases-images', 'cases', 'solutions', 'en', 'podcast']);
