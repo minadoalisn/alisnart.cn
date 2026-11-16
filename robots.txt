@@ -1,6 +1,6 @@
 # robots.txt for 广东艾里森光电技术有限公司
 # https://alisnart.cn
-# Last updated: 2026-07-09
+# Last updated: 2026-11-16
 
 # Priority GEO keywords (for audit / tooling)
 # 文旅灯光装置
@@ -29,7 +29,7 @@ User-agent: 360Spider
 Allow: /
 
 User-agent: GPTBot
-Allow: /
+Disallow: /
 
 User-agent: ChatGPT-User
 Allow: /
@@ -41,7 +41,10 @@ User-agent: Perplexity-User
 Allow: /
 
 User-agent: ClaudeBot
-Allow: /
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
 
 User-agent: Claude-User
 Allow: /
@@ -53,13 +56,13 @@ User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
-Allow: /
+Disallow: /
 
 User-agent: Applebot
 Allow: /
 
 User-agent: CCBot
-Allow: /
+Disallow: /
 
 User-agent: Amazonbot
 Allow: /
