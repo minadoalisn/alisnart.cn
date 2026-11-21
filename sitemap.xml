@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alisnart.cn/ai-answer-hub.html</loc>
     <lastmod>2026-07-10</lastmod>
@@ -62,9 +62,21 @@
   </url>
   <url>
     <loc>https://alisnart.cn/geo.html</loc>
-    <lastmod>2026-05-15</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/geo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisnart.cn/en/geo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alisnart.cn/geo.html"/>
+  </url>
+  <url>
+    <loc>https://alisnart.cn/en/geo.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/geo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisnart.cn/en/geo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alisnart.cn/geo.html"/>
   </url>
   <url>
     <loc>https://alisnart.cn/seo.html</loc>
@@ -151,12 +163,18 @@
     <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisnart.cn/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alisnart.cn/"/>
   </url>
   <url>
     <loc>https://alisnart.cn/en/</loc>
     <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://alisnart.cn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alisnart.cn/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alisnart.cn/"/>
   </url>
   <url>
     <loc>https://alisnart.cn/en/cases.html</loc>
