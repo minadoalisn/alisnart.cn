@@ -1,0 +1,217 @@
+/* alisnart.cn Awwwards P1+P2 — 2026-11-22
+   New file (first deploy needs no cache-bust query; bump ?v= on later edits).
+   Only existing brand tokens are used: gold, cinnabar red, foshou yellow,
+   liuli blue, mist white. No new colour, no new library. All motion is
+   CSS + the matching vanilla JS in assets/js/awwwards.js. */
+
+/* ---------- skip links & motion kill-switch ---------- */
+.aw-skip-link {
+  position: absolute; left: 16px; top: -60px; z-index: 300;
+  padding: 10px 16px; border-radius: 999px;
+  background: var(--brand-mist-white); color: #111;
+  font-size: 14px; font-weight: 700; text-decoration: none;
+  transition: top .2s ease;
+}
+.aw-skip-link:focus { top: 12px; }
+.aw-skip-motion {
+  position: fixed; top: 76px; right: 18px; z-index: 190;
+  padding: 8px 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid rgba(255,255,255,.28); background: rgba(10,10,12,.82); color: rgba(255,255,255,.85);
+  font-size: 13px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.aw-skip-motion:hover { border-color: var(--accent-gold); color: #fff; }
+html.aw-motion-off .aw-skip-motion { display: none; }
+
+/* ---------- A. hero: oversized cropped type + hairline grid ---------- */
+.premium-hero-copy { position: relative; }
+.premium-hero-copy::before {
+  content: ""; position: absolute; inset: -8px 0 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(90deg, rgba(10,24,24,.055) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(10,24,24,.055) 1px, transparent 1px);
+  background-size: 120px 120px;
+  -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent 96%);
+  mask-image: linear-gradient(180deg, #000 30%, transparent 96%);
+}
+.premium-hero-copy > * { position: relative; z-index: 1; }
+.aw-hero-crop { overflow: hidden; }
+.premium-home .premium-hero h1 {
+  font-size: clamp(64px, 10.5vw, 148px);
+  line-height: 1.04; letter-spacing: -.015em; font-weight: 800;
+  margin-top: -.06em; max-width: none;
+}
+.premium-hero h1 .aw-accent { font-style: italic; }
+.premium-home .premium-hero h1 .aw-accent { color: var(--brand-cinnabar-red); }
+/* Dark heroes (cases / interior): gold accent reads on the dark overlay. */
+.compact-hero h1 .aw-accent { color: var(--accent-gold); font-style: italic; }
+.compact-hero h1 { font-size: clamp(52px, 7.5vw, 104px); line-height: 1.06; }
+.compact-hero::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 120px 120px;
+  -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent 90%);
+  mask-image: linear-gradient(180deg, #000 20%, transparent 90%);
+}
+.compact-hero .hero-content { position: relative; z-index: 1; }
+/* Letter fade-in: JS splits the H1 into .aw-char tokens. Opacity only, so no layout shift. */
+.aw-char {
+  display: inline-block; opacity: 0;
+  transform: translateY(.14em);
+  transition: opacity .45s ease, transform .45s cubic-bezier(.2,.8,.2,1);
+}
+.aw-char.aw-in { opacity: 1; transform: translateY(0); }
+.aw-char-space { display: inline; }
+/* Hero visual parallax: JS writes --aw-px (translateY), desktop only. */
+.aw-parallax .premium-hero-visual img,
+.aw-parallax .scene-panel img { will-change: transform; transform: translateY(var(--aw-px, 0)) scale(1.06); }
+
+/* ---------- C. numbered chapters: enlarge the existing 01-04 numerals ---------- */
+.business-grid .business-card > span {
+  font-size: clamp(30px, 3vw, 44px); line-height: 1;
+  color: var(--accent-gold); letter-spacing: .02em;
+}
+.business-grid .business-card > span::after {
+  content: " / 04"; font-size: 13px; letter-spacing: .14em;
+  color: rgba(255,255,255,.55); vertical-align: .55em;
+}
+/* Extra reveal targets (site.js already reveals .section-head/.card/.scene-panel etc.). */
+[data-reveal].aw-extra { transition-delay: 0s; }
+
+/* ---------- D. material collage + section rules ---------- */
+.aw-materials {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;
+  margin-top: 56px;
+}
+.aw-materials figure { margin: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); }
+.aw-materials img { display: block; width: 100%; height: 190px; object-fit: cover; }
+.aw-materials figcaption { padding: 16px 18px; background: var(--bg-card); }
+.aw-materials figcaption b { display: block; font-size: 19px; letter-spacing: .06em; }
+.aw-materials figcaption span { display: block; margin-top: 4px; font-size: 13px; color: var(--text-muted); }
+.aw-materials figure:nth-child(1) figcaption b { color: var(--brand-mist-white); }
+.aw-materials figure:nth-child(2) figcaption b { color: var(--brand-liuli-blue); }
+.aw-materials figure:nth-child(3) figcaption b { color: var(--brand-cinnabar-red); }
+/* Section divider rules: cinnabar for banquet, liuli for water. */
+.premium-home .banquet-feature-section { border-top: 1px solid rgba(194,65,45,.5); }
+.premium-home .section.alt { border-top: 1px solid rgba(99,181,183,.45); }
+.case-category.banquet-category { border-top: 1px solid rgba(194,65,45,.45); }
+.case-category.stage-category { border-top: 1px solid rgba(99,181,183,.4); }
+.banquet-site .banquet-inspiration,
+.banquet-site .banquet-method { border-top: 1px solid rgba(194,65,45,.4); }
+/* Banquet paper note: the existing section copy, styled as a handwritten margin note. */
+.banquet-site .aw-note {
+  font-family: "STSong", "SimSun", serif; font-style: italic;
+  color: var(--brand-cinnabar-red);
+  border-left: 2px solid var(--brand-cinnabar-red);
+  padding-left: 14px; font-size: 16px; line-height: 1.7;
+}
+.banquet-site .banquet-inspiration {
+  background-image: repeating-linear-gradient(0deg, rgba(237,238,232,.022) 0 1px, transparent 1px 26px);
+}
+
+/* ---------- B. case three-view toolbar (cases.html) ---------- */
+.aw-case-tools {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  padding: 22px 0 6px;
+}
+.aw-view-switch { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.aw-view-switch button {
+  appearance: none; border: 0; background: transparent; color: var(--text-muted);
+  padding: 9px 18px; font-size: 14px; font-weight: 650; cursor: pointer;
+}
+.aw-view-switch button + button { border-left: 1px solid var(--border); }
+.aw-view-switch button[aria-pressed="true"] { background: var(--accent-gold); color: #111; }
+.aw-search input, .aw-filter select {
+  min-height: 42px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--bg-card); color: var(--brand-mist-white);
+  font-size: 14px;
+}
+.aw-search input { width: min(280px, 60vw); }
+.aw-search input::placeholder { color: var(--text-muted); }
+.aw-count { margin: 0 0 0 auto; font-size: 13px; color: var(--text-muted); }
+.aw-empty { color: var(--text-muted); padding: 28px 0; }
+.aw-sr {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+/* List view: one row per item. */
+main[data-case-view="list"] .case-grid { grid-template-columns: minmax(0, 1fr); }
+main[data-case-view="list"] .media-card { flex-direction: row; align-items: stretch; }
+main[data-case-view="list"] .media-card img { width: 220px; height: auto; min-height: 150px; flex: none; }
+main[data-case-view="list"] .media-body { border-top: 0; border-left: 1px solid var(--border); }
+main[data-case-view="list"] .banquet-case-feature { grid-template-columns: 220px 1fr; }
+main[data-case-view="list"] .case-feature { grid-template-columns: 220px 1fr; }
+/* Gallery view: big images, minimal text. */
+main[data-case-view="gallery"] .case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+main[data-case-view="gallery"] .media-card img { height: 380px; }
+main[data-case-view="gallery"] .media-body p { display: none; }
+main[data-case-view="gallery"] .banquet-case-feature > div p,
+main[data-case-view="gallery"] .case-feature-body > p { display: none; }
+.aw-hidden { display: none !important; }
+
+/* ---------- E. nav roll-over + footer marquee + fixed lang switch ---------- */
+.nav-links a .aw-roll { display: inline-block; overflow: hidden; vertical-align: bottom; max-height: 1.5em; }
+.nav-links a .aw-roll > span { display: block; transition: transform .32s cubic-bezier(.2,.8,.2,1); }
+.nav-links a .aw-roll > span + span { color: var(--accent-gold); }
+.nav-links a:hover .aw-roll > span { transform: translateY(-100%); }
+.aw-marquee {
+  overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 14px 0; margin-bottom: 34px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.aw-marquee-track { display: inline-flex; gap: 0; white-space: nowrap; animation: aw-marquee 46s linear infinite; }
+.aw-marquee:hover .aw-marquee-track { animation-play-state: paused; }
+.aw-marquee-track a {
+  color: var(--text-muted); font-size: 14px; letter-spacing: .04em;
+  padding: 0 22px; text-decoration: none;
+}
+.aw-marquee-track a:hover { color: var(--accent-gold); }
+.aw-marquee-track a + a { border-left: 1px solid var(--border); }
+@keyframes aw-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.aw-lang-fixed {
+  position: fixed; right: 18px; bottom: 76px; z-index: 180;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 46px; min-height: 46px; padding: 0 13px; border-radius: 999px;
+  background: rgba(245,245,247,.94); color: #111; font-size: 13px; font-weight: 800;
+  box-shadow: 0 12px 40px rgba(0,0,0,.34); text-decoration: none;
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+}
+.aw-lang-fixed:hover { transform: translateY(-2px); background: var(--accent-gold); color: #111; }
+.aw-chapter-progress {
+  position: fixed; left: 18px; bottom: 18px; z-index: 180;
+  padding: 8px 14px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.16); background: rgba(10,10,12,.78); color: rgba(255,255,255,.75);
+  font-size: 12px; letter-spacing: .18em;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.aw-chapter-progress b { color: var(--accent-gold); font-weight: 800; }
+
+/* ---------- F. reduced motion / mobile static fallback ---------- */
+@media (max-width: 900px) {
+  .premium-home .premium-hero h1 { font-size: clamp(52px, 13vw, 84px); }
+  .aw-hero-crop { overflow: visible; }
+  .premium-home .premium-hero h1 { margin-top: 0; }
+  .aw-materials { grid-template-columns: minmax(0, 1fr); }
+  .aw-materials img { height: 170px; }
+  main[data-case-view="list"] .media-card { flex-direction: column; }
+  main[data-case-view="list"] .media-card img { width: 100%; height: 220px; }
+  main[data-case-view="list"] .media-body { border-left: 0; border-top: 1px solid var(--border); }
+  main[data-case-view="gallery"] .case-grid { grid-template-columns: minmax(0, 1fr); }
+  .aw-chapter-progress, .aw-skip-motion, .aw-lang-fixed { display: none; }
+  .aw-count { margin-left: 0; }
+}
+@media (max-width: 520px) {
+  .premium-home .premium-hero h1 { font-size: 50px; }
+  .compact-hero h1 { font-size: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aw-char { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .aw-marquee-track { animation: none !important; }
+  .nav-links a .aw-roll > span { transition: none !important; }
+}
+html.aw-motion-off .aw-char { opacity: 1 !important; transform: none !important; transition: none !important; }
+html.aw-motion-off .aw-marquee-track { animation: none !important; }
+html.aw-motion-off .nav-links a .aw-roll > span { transition: none !important; }
+html.aw-motion-off [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
