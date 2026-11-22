@@ -41,13 +41,16 @@
     var frag = doc.createDocumentFragment();
     var isCJK = /[\u4e00-\u9fff]/.test(text);
     var tokens = isCJK ? text.split("") : text.split(/(\s+)/);
+    var lastChar = null;
     tokens.forEach(function (tok) {
       if (!tok) return;
-      if (/^\s+$/.test(tok)) { frag.appendChild(doc.createTextNode(tok)); return; }
+      if (/^\s+$/.test(tok)) { frag.appendChild(doc.createTextNode(tok)); lastChar = null; return; }
+      if (isCJK && /^[，。、！？；：]$/.test(tok) && lastChar) { lastChar.textContent += tok; return; }
       var s = doc.createElement("span");
       s.className = "aw-char";
       s.textContent = tok;
       frag.appendChild(s);
+      lastChar = s;
     });
     node.parentNode.replaceChild(frag, node);
   }

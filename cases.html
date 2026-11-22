@@ -45,9 +45,9 @@
         <button type="button" data-view="list" aria-pressed="false">列表</button>
         <button type="button" data-view="gallery" aria-pressed="false">画廊</button>
       </div>
-      <label class="aw-search"><span class="aw-sr">搜索案例</span><input type="search" placeholder="搜索案例名称、场景…" autocomplete="off"></label>
-      <label class="aw-filter"><span class="aw-sr">分类筛选</span><select data-filter="cat"><option value="">全部分类</option><option value="art">艺术装置</option><option value="stage">舞美装置</option><option value="banquet">宫宴餐秀</option><option value="renewal">城市更新</option></select></label>
-      <label class="aw-filter"><span class="aw-sr">场景筛选</span><select data-filter="scene"><option value="">全部场景</option><option value="entrance">入口</option><option value="water">湖面</option><option value="street">街区</option><option value="show">演艺</option></select></label>
+      <label class="aw-search"><span class="aw-sr">搜索案例</span><input type="search" id="aw-case-search" name="q" placeholder="搜索案例名称、场景…" autocomplete="off"></label>
+      <label class="aw-filter"><span class="aw-sr">分类筛选</span><select data-filter="cat" id="aw-case-cat" name="cat"><option value="">全部分类</option><option value="art">艺术装置</option><option value="stage">舞美装置</option><option value="banquet">宫宴餐秀</option><option value="renewal">城市更新</option></select></label>
+      <label class="aw-filter"><span class="aw-sr">场景筛选</span><select data-filter="scene" id="aw-case-scene" name="scene"><option value="">全部场景</option><option value="entrance">入口</option><option value="water">湖面</option><option value="street">街区</option><option value="show">演艺</option></select></label>
       <p class="aw-count" aria-live="polite"></p>
     </div>
 
