@@ -38,13 +38,13 @@ html.aw-motion-off .aw-skip-motion { display: none; }
 .premium-home .premium-hero h1 {
   font-size: clamp(64px, 10.5vw, 148px);
   line-height: 1.04; letter-spacing: -.015em; font-weight: 800;
-  margin-top: -.06em; max-width: none;
+  margin-top: -.06em; max-width: none; text-wrap: balance;
 }
 .premium-hero h1 .aw-accent { font-style: italic; }
 .premium-home .premium-hero h1 .aw-accent { color: var(--brand-cinnabar-red); }
 /* Dark heroes (cases / interior): gold accent reads on the dark overlay. */
 .compact-hero h1 .aw-accent { color: var(--accent-gold); font-style: italic; }
-.compact-hero h1 { font-size: clamp(52px, 7.5vw, 104px); line-height: 1.06; }
+.compact-hero h1 { font-size: clamp(52px, 7.5vw, 104px); line-height: 1.06; text-wrap: balance; }
 .compact-hero::before {
   content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
   background-image:
